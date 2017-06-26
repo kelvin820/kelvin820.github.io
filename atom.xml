@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-06-26T16:06:58.000Z</updated>
+  <updated>2017-06-26T16:14:33.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -20,17 +20,18 @@
     <link href="http://kelvin820.github.io/2017/06/26/TOC-test/"/>
     <id>http://kelvin820.github.io/2017/06/26/TOC-test/</id>
     <published>2017-06-26T15:05:56.000Z</published>
-    <updated>2017-06-26T16:06:58.000Z</updated>
+    <updated>2017-06-26T16:14:33.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="這個是ch的h1"><a href="#這個是CH的H1" class="headerlink" title="這個是CH的H1"></a>這個是CH的H1</h1><h2 id="1234"><a href="#1234" class="headerlink" title="1234"></a>1234</h2><h2 id="這個是ch1的h2"><a href="#這個是CH1的H2" class="headerlink" title="這個是CH1的H2"></a>這個是CH1的H2</h2><h2 id="5678"><a href="#5678" class="headerlink" title="5678"></a>5678</h2><h3 id="這個是ch3的h3"><a href="#這個是CH3的H3" class="headerlink" title="這個是CH3的H3"></a>這個是CH3的H3</h3><hr>
-<h1 id="這個是ch2的h2"><a href="#這個是CH2的H2" class="headerlink" title="這個是CH2的H2"></a>這個是CH2的H2</h1><p>abc</p>
-<h2 id="這個是ch2的h2"><a href="#這個是CH2的H2-1" class="headerlink" title="這個是CH2的H2"></a>這個是CH2的H2</h2><p>def</p>
-<h3 id="這個是ch3的h3"><a href="#這個是CH3的H3-1" class="headerlink" title="這個是CH3的H3"></a>這個是CH3的H3</h3><p>ghi</p>
+    <content type="html"><![CDATA[<h3 id="這個是ch的h1"><a href="#這個是CH的H1" class="headerlink" title="這個是CH的H1"></a>這個是CH的H1</h3><hr>
+<h2 id="這個是ch1的h2"><a href="#這個是CH1的H2" class="headerlink" title="這個是CH1的H2"></a>這個是CH1的H2</h2><hr>
+<h1 id="這個是ch3的h3"><a href="#這個是CH3的H3" class="headerlink" title="這個是CH3的H3"></a>這個是CH3的H3</h1><hr>
+<p>1 這個是CH2的H2<br>1 這個是CH2的H2<br>1 這個是CH3的H3</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;這個是ch的h1&quot;&gt;&lt;a href=&quot;#這個是CH的H1&quot; class=&quot;headerlink&quot; title=&quot;這個是CH的H1&quot;&gt;&lt;/a&gt;這個是CH的H1&lt;/h1&gt;&lt;h2 id=&quot;1234&quot;&gt;&lt;a href=&quot;#1234&quot; class=&quot;headerlink&quot; 
+      &lt;h3 id=&quot;這個是ch的h1&quot;&gt;&lt;a href=&quot;#這個是CH的H1&quot; class=&quot;headerlink&quot; title=&quot;這個是CH的H1&quot;&gt;&lt;/a&gt;這個是CH的H1&lt;/h3&gt;&lt;hr&gt;
+&lt;h2 id=&quot;這個是ch1的h2&quot;&gt;&lt;a href=&quot;#這個是CH1的H2&quot; clas
     
     </summary>
     
