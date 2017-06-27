@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-06-27T15:23:47.000Z</updated>
+  <updated>2017-06-27T15:25:53.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -20,19 +20,18 @@
     <link href="http://kelvin820.github.io/2017/06/27/TOC-test/"/>
     <id>http://kelvin820.github.io/2017/06/27/TOC-test/</id>
     <published>2017-06-27T12:46:38.000Z</published>
-    <updated>2017-06-27T15:23:47.000Z</updated>
+    <updated>2017-06-27T15:25:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>This is a test page.</p>
-<h2 id="這個是ch的h1"><a href="#這個是CH的H1" class="headerlink" title="這個是CH的H1"></a>這個是CH的H1</h2><p>1111111</p>
-<h2 id="這個是ch1的h2"><a href="#這個是CH1的H2" class="headerlink" title="這個是CH1的H2"></a>這個是CH1的H2</h2><p>222222</p>
-<h2 id="這個是ch3的h3"><a href="#這個是CH3的H3" class="headerlink" title="這個是CH3的H3"></a>這個是CH3的H3</h2><p>333333</p>
+<h2 id="這個是ch的h1"><a href="#這個是CH的H1" class="headerlink" title="這個是CH的H1"></a>這個是CH的H1</h2><h2 id="這個是ch1的h2"><a href="#這個是CH1的H2" class="headerlink" title="這個是CH1的H2"></a>這個是CH1的H2</h2><h2 id="這個是ch1的h3"><a href="#這個是CH1的H3" class="headerlink" title="這個是CH1的H3"></a>這個是CH1的H3</h2><p>1111111</p>
+<h2 id="這個是ch1的h2"><a href="#這個是CH1的H2-1" class="headerlink" title="#這個是CH1的H2"></a>#這個是CH1的H2</h2><p>222222</p>
+<h2 id="這個是ch3的h3"><a href="#這個是CH3的H3" class="headerlink" title="##這個是CH3的H3"></a>##這個是CH3的H3</h2><p>333333</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;This is a test page.&lt;/p&gt;
-&lt;h2 id=&quot;這個是ch的h1&quot;&gt;&lt;a href=&quot;#這個是CH的H1&quot; class=&quot;headerlink&quot; title=&quot;這個是CH的H1&quot;&gt;&lt;/a&gt;這個是CH的H1&lt;/h2&gt;&lt;p&gt;1111111&lt;/p&gt;
-&lt;h2 id
+&lt;h2 id=&quot;這個是ch的h1&quot;&gt;&lt;a href=&quot;#這個是CH的H1&quot; class=&quot;headerlink&quot; title=&quot;這個是CH的H1&quot;&gt;&lt;/a&gt;這個是CH的H1&lt;/h2&gt;&lt;h2 id=&quot;這個是ch1的h2&quot;&gt;&lt;a
     
     </summary>
     
