@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-06-27T16:13:05.000Z</updated>
+  <updated>2017-06-27T16:27:40.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>TOC_test</title>
+    <title>Hexo 用 Markdown語法備註</title>
     <link href="http://kelvin820.github.io/2017/06/27/TOC-test/"/>
     <id>http://kelvin820.github.io/2017/06/27/TOC-test/</id>
     <published>2017-06-27T12:46:38.000Z</published>
-    <updated>2017-06-27T16:13:05.000Z</updated>
+    <updated>2017-06-27T16:27:40.000Z</updated>
     
     <content type="html"><![CDATA[<p>This is a test page.</p>
 <h1 id="這個是ch的h1"><a href="#這個是CH的H1" class="headerlink" title="這個是CH的H1"></a>這個是CH的H1</h1><p>wwww</p>
@@ -46,7 +46,10 @@
 <p>###C</p>
 <h1 id="c"><a href="#C" class="headerlink" title="C"></a>C</h1><h2 id="e"><a href="#E" class="headerlink" title="E"></a>E</h2><h3 id="f"><a href="#F" class="headerlink" title="F"></a>F</h3><h2 id="這個是ch1的h2"><a href="#這個是CH1的H2" class="headerlink" title="這個是CH1的H2"></a>這個是CH1的H2</h2><h2 id="這個是ch1的h3"><a href="#這個是CH1的H3" class="headerlink" title="這個是CH1的H3"></a>這個是CH1的H3</h2><p>1111111</p>
 <h1 id="這個是ch2的h1"><a href="#這個是CH2的H1" class="headerlink" title="這個是CH2的H1"></a>這個是CH2的H1</h1><p>–<br>222222</p>
-<h2 id="這個是ch3的h3"><a href="#這個是CH3的H3" class="headerlink" title="##這個是CH3的H3"></a>##這個是CH3的H3</h2><p>333333</p>
+<h2 id="這個是ch3的h3"><a href="#這個是CH3的H3" class="headerlink" title="##這個是CH3的H3"></a>##這個是CH3的H3</h2><p>\ 333333</p>
+<blockquote>
+<p>test</p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
@@ -57,10 +60,10 @@
     
     </summary>
     
-      <category term="test" scheme="http://kelvin820.github.io/categories/test/"/>
+      <category term="Tech" scheme="http://kelvin820.github.io/categories/Tech/"/>
     
     
-      <category term="test" scheme="http://kelvin820.github.io/tags/test/"/>
+      <category term="Hexo" scheme="http://kelvin820.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -69,21 +72,9 @@
     <link href="http://kelvin820.github.io/2017/06/24/hello-world/"/>
     <id>http://kelvin820.github.io/2017/06/24/hello-world/</id>
     <published>2017-06-23T16:00:00.000Z</published>
-    <updated>2017-06-24T02:50:34.000Z</updated>
+    <updated>2017-06-27T16:36:38.000Z</updated>
     
-    <content type="html"><![CDATA[<!-- toc -->
-<ul>
-<li><a href="#完整移除nodejs">完整移除Node.js</a></li>
-<li><a href="#hexo-安裝步驟">Hexo 安裝步驟</a><ul>
-<li><a href="#step1-利用nvm裝nodejs">Step1 利用NVM裝Node.js</a></li>
-<li><a href="#step2-利用homebrew-裝-git">Step2 利用Homebrew 裝 Git</a></li>
-<li><a href="#step3-安裝hexo">Step3 安裝Hexo</a></li>
-<li><a href="#step4-開個blog專用folder">Step4 開個Blog專用Folder</a></li>
-</ul>
-</li>
-</ul>
-<!-- tocstop -->
-<p>原本以為是個開開心心，簡簡單單的設置，結果天殺的MAC 似乎與node.js 有仇，用<code>npm install -g hexo-cli</code>不斷的悲劇error，查到後來有可能是node.js 用npm安裝的問題，似乎改用nvm裝就會沒事。現在我正安裝中，會不會也悲劇呢？</p>
+    <content type="html"><![CDATA[<p>原本以為是個開開心心，簡簡單單的設置，結果天殺的MAC 似乎與node.js 有仇，用<code>npm install -g hexo-cli</code>不斷的悲劇error，查到後來有可能是node.js 用npm安裝的問題，似乎改用nvm裝就會沒事。現在我正安裝中，會不會也悲劇呢？</p>
 <p>結果竟然順利完成了，什們<code>sudo npm install -g hexo-cli</code>都是屁，一點用也沒沒有，還是要換用<em>NVM</em>才行。</p>
 <h2 id="完整移除nodejs"><a href="#完整移除Node-js" class="headerlink" title="完整移除Node.js"></a>完整移除Node.js</h2><p>利用以下Script 移除不是用<em>NVM</em> 裝的Node</p>
 <p>first:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">lsbom -f -l -s -pf</div><div class="line">/var/db/receipts/org.nodejs.node.pkg.bom | <span class="keyword">while</span> read f; <span class="keyword">do</span>  sudo rm /usr/local/$&#123;f&#125;; done</div><div class="line">sudo rm -rf /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node</span></span></div><div class="line">/usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span></span></div><div class="line">/var/db/receipts/org.nodejs.*</div></pre></td></tr></table></figure></p>
@@ -118,11 +109,7 @@
     
     <summary type="html">
     
-      &lt;!-- toc --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#完整移除nodejs&quot;&gt;完整移除Node.js&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#hexo-安裝步驟&quot;&gt;Hexo 安裝步驟&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#step1-利用nvm裝nodejs
+      &lt;p&gt;原本以為是個開開心心，簡簡單單的設置，結果天殺的MAC 似乎與node.js 有仇，用&lt;code&gt;npm install -g hexo-cli&lt;/code&gt;不斷的悲劇error，查到後來有可能是node.js 用npm安裝的問題，似乎改用nvm裝就會沒事。現在我正安裝中，
     
     </summary>
     
@@ -130,6 +117,10 @@
     
     
       <category term="Hexo" scheme="http://kelvin820.github.io/tags/Hexo/"/>
+    
+      <category term="Markdown" scheme="http://kelvin820.github.io/tags/Markdown/"/>
+    
+      <category term="教學" scheme="http://kelvin820.github.io/tags/%E6%95%99%E5%AD%B8/"/>
     
   </entry>
   
