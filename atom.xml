@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-06-28T16:39:22.000Z</updated>
+  <updated>2017-06-28T16:40:41.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://kelvin820.github.io/2017/06/27/TOC-test/"/>
     <id>http://kelvin820.github.io/2017/06/27/TOC-test/</id>
     <published>2017-06-27T12:46:38.000Z</published>
-    <updated>2017-06-28T16:39:22.000Z</updated>
+    <updated>2017-06-28T16:40:41.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="文章頭格式上面那些"><a href="#文章頭格式上面那些" class="headerlink" title="文章頭格式上面那些"></a>文章頭格式上面那些</h1><p><code>fornt-matter</code> 的格式說明<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">使用的</span> <span class="string">Markdown語法備註</span></div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-06</span><span class="bullet">-27</span> <span class="number">20</span><span class="string">:46:38</span></div><div class="line"><span class="attr">toc:</span> <span class="literal">true</span></div><div class="line"><span class="attr">categories:</span> <span class="string">Tech</span></div><div class="line"><span class="attr">tags:</span> <span class="string">[Hexo,Markdown,教學]</span></div><div class="line"><span class="attr">comments:</span> <span class="literal">true</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="attr">layout:</span> <span class="string">page</span></div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<p>[TOC]</p>
+<h1 id="文章頭格式上面那些"><a href="#文章頭格式上面那些" class="headerlink" title="文章頭格式上面那些"></a>文章頭格式上面那些</h1><p><code>fornt-matter</code> 的格式說明<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">使用的</span> <span class="string">Markdown語法備註</span></div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-06</span><span class="bullet">-27</span> <span class="number">20</span><span class="string">:46:38</span></div><div class="line"><span class="attr">toc:</span> <span class="literal">true</span></div><div class="line"><span class="attr">categories:</span> <span class="string">Tech</span></div><div class="line"><span class="attr">tags:</span> <span class="string">[Hexo,Markdown,教學]</span></div><div class="line"><span class="attr">comments:</span> <span class="literal">true</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="attr">layout:</span> <span class="string">page</span></div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure></p>
 <h1 id="文字斜體與粗體表示"><a href="#文字斜體與粗體表示" class="headerlink" title="文字斜體與粗體表示  "></a>文字斜體與粗體表示  </h1><p>使用 <code>_</code> 或是 <code>*</code> 表示<em>斜體</em>，使用 <code>__</code> 或是 <code>**</code> 表示<strong>粗體</strong>。</p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">*斜體* 或 <span class="keyword">_</span>斜體<span class="keyword">_</span></div><div class="line">**粗體** 或 <span class="keyword">_</span>粗體<span class="keyword">_</span></div></pre></td></tr></table></figure>
 <h1 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線 "></a>分隔線 </h1><p>使用單行的 <code>___</code> 或是 <code>***</code> 表示。</p>
@@ -40,7 +41,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;文章頭格式上面那些&quot;&gt;&lt;a href=&quot;#文章頭格式上面那些&quot; class=&quot;headerlink&quot; title=&quot;文章頭格式上面那些&quot;&gt;&lt;/a&gt;文章頭格式上面那些&lt;/h1&gt;&lt;p&gt;&lt;code&gt;fornt-matter&lt;/code&gt; 的格式說明&lt;br&gt;&lt;figure
+      &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;文章頭格式上面那些&quot;&gt;&lt;a href=&quot;#文章頭格式上面那些&quot; class=&quot;headerlink&quot; title=&quot;文章頭格式上面那些&quot;&gt;&lt;/a&gt;文章頭格式上面那些&lt;/h1&gt;&lt;p&gt;&lt;code&gt;fornt-matter&lt;/code&gt; 的格式
     
     </summary>
     
