@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-06-28T16:37:51.000Z</updated>
+  <updated>2017-06-28T16:39:22.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://kelvin820.github.io/2017/06/27/TOC-test/"/>
     <id>http://kelvin820.github.io/2017/06/27/TOC-test/</id>
     <published>2017-06-27T12:46:38.000Z</published>
-    <updated>2017-06-28T16:37:51.000Z</updated>
+    <updated>2017-06-28T16:39:22.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文章頭格式上面那些"><a href="#文章頭格式上面那些" class="headerlink" title="文章頭格式上面那些"></a>文章頭格式上面那些</h1><p><code>fornt-matter</code> 的格式說明<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">使用的</span> <span class="string">Markdown語法備註</span></div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-06</span><span class="bullet">-27</span> <span class="number">20</span><span class="string">:46:38</span></div><div class="line"><span class="attr">toc:</span> <span class="literal">true</span></div><div class="line"><span class="attr">categories:</span> <span class="string">Tech</span></div><div class="line"><span class="attr">tags:</span> <span class="string">[Hexo,Markdown,教學]</span></div><div class="line"><span class="attr">comments:</span> <span class="literal">true</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="attr">layout:</span> <span class="string">page</span></div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure></p>
 <h1 id="文字斜體與粗體表示"><a href="#文字斜體與粗體表示" class="headerlink" title="文字斜體與粗體表示  "></a>文字斜體與粗體表示  </h1><p>使用 <code>_</code> 或是 <code>*</code> 表示<em>斜體</em>，使用 <code>__</code> 或是 <code>**</code> 表示<strong>粗體</strong>。</p>
@@ -28,11 +28,14 @@
 <h1 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線 "></a>分隔線 </h1><p>使用單行的 <code>___</code> 或是 <code>***</code> 表示。</p>
 <h1 id="分級標題"><a href="#分級標題" class="headerlink" title="分級標題"></a>分級標題</h1><p>使用<code>===</code>表示一級標題，使用<code>---</code>表示二級標題。<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="section">這是一個一級標題</span></div><div class="line">===</div><div class="line"><span class="section">這是一個二級標題</span></div><div class="line">---</div><div class="line">### 這個可以表示三級標題  </div><div class="line"><span class="code">```</span>  </div><div class="line">也可用<span class="code">`#`</span>來定義：</div></pre></td></tr></table></figure></p>
 <h1 id="h1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="h2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="h3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><h4 id="h4"><a href="#H4" class="headerlink" title="H4"></a>H4</h4><h5 id="h5"><a href="#H5" class="headerlink" title="H5"></a>H5</h5><h6 id="h6"><a href="#H6" class="headerlink" title="H6"></a>H6</h6><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">刪除線  </span></div><div class="line">===</div><div class="line">使用的 <span class="code">`~~`</span> 表示。~~這句話刪除~~</div></pre></td></tr></table></figure>
-<p><del>這句話刪除</del><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="section">超鏈結寫法  </span></div><div class="line">===</div><div class="line"><span class="section">文字超鏈接</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p><del>這句話刪除</del><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">超鏈結寫法  </span></div><div class="line">===</div><div class="line"><span class="section">文字超鏈接</span></div><div class="line">---</div></pre></td></tr></table></figure></p>
 <p><a href="URL">Link name</a><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="section">圖片超鏈結寫法  </span></div><div class="line">---</div></pre></td></tr></table></figure></p>
 <p>！<a href="PIC URL">PIC name</a><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="section">Youtube 內嵌法  </span></div><div class="line">---</div><div class="line">直接插入<span class="code">`iframe`</span> 代碼</div></pre></td></tr></table></figure></p>
 <p><script src="/js/youtube-autoresizer.js"></script></p>
-<p><iframe width="640" height="360" src="https://www.youtube.com/embed/HfElOZSEqn4" frameborder="0" allowfullscreen></iframe><br>```</p>
+<p><iframe width="640" height="360" src="https://www.youtube.com/embed/HfElOZSEqn4" frameborder="0" allowfullscreen></iframe><br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="section">引用</span></div><div class="line">===</div><div class="line">使用<span class="code">`&gt;`</span> 表示</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>為何一直失敗<br>```<br>為何一直失敗</p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
