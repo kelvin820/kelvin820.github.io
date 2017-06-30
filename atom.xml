@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-06-30T18:08:57.000Z</updated>
+  <updated>2017-06-30T18:44:38.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -20,43 +20,96 @@
     <link href="http://kelvin820.github.io/2017/06/27/TOC-test/"/>
     <id>http://kelvin820.github.io/2017/06/27/TOC-test/</id>
     <published>2017-06-27T12:46:38.000Z</published>
-    <updated>2017-06-30T18:08:57.000Z</updated>
+    <updated>2017-06-30T18:44:38.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="文章頭格式上面那些"><a href="#文章頭格式上面那些" class="headerlink" title="文章頭格式上面那些  "></a>文章頭格式上面那些  </h2><p><code>fornt-matter</code> 的格式說明<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">使用的</span> <span class="string">Markdown語法備註</span></div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-06</span><span class="bullet">-27</span> <span class="number">20</span><span class="string">:46:38</span></div><div class="line"><span class="attr">toc:</span> <span class="literal">true</span></div><div class="line"><span class="attr">categories:</span> <span class="string">Tech</span></div><div class="line"><span class="attr">tags:</span> <span class="string">[Hexo,Markdown,教學]</span></div><div class="line"><span class="attr">comments:</span> <span class="literal">true</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="attr">layout:</span> <span class="string">page</span></div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure></p>
-<h1 id="文字斜體與粗體表示"><a href="#文字斜體與粗體表示" class="headerlink" title="文字斜體與粗體表示  "></a>文字斜體與粗體表示  </h1><p>使用 <code>_</code> 或是 <code>*</code> 表示<em>斜體</em>，使用 <code>__</code> 或是 <code>**</code> 表示<strong>粗體</strong>。</p>
+    <content type="html"><![CDATA[<h2 id="這個是-front-matter-的寫法"><a href="#這個是-front-matter-的寫法" class="headerlink" title="這個是 front-matter 的寫法"></a>這個是 front-matter 的寫法</h2><p><code>fornt-matter</code> 的格式說明<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">---</span></div><div class="line"><span class="attr">title:</span> <span class="string">Hexo</span> <span class="string">使用的</span> <span class="string">Markdown語法備註</span></div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-06</span><span class="bullet">-27</span> <span class="number">20</span><span class="string">:46:38</span></div><div class="line"><span class="attr">toc:</span> <span class="literal">true</span></div><div class="line"><span class="attr">categories:</span> <span class="string">Tech</span></div><div class="line"><span class="attr">tags:</span> <span class="string">[Hexo,Markdown,教學]</span></div><div class="line"><span class="attr">comments:</span> <span class="literal">true</span></div><div class="line"><span class="attr">mathjax:</span> <span class="literal">true</span></div><div class="line"><span class="attr">layout:</span> <span class="string">page</span> <span class="string">(要顯示TOC</span> <span class="string">這一欄不能寫)</span></div><div class="line"><span class="meta">---</span></div></pre></td></tr></table></figure></p>
+<h2 id="文字斜體-粗體與刪除"><a href="#文字斜體、粗體與刪除" class="headerlink" title="文字斜體、粗體與刪除"></a>文字斜體、粗體與刪除</h2><p>使用 <code>_</code> 或是 <code>*</code> 表示<em>斜體</em>，使用 <code>__</code> 或是 <code>**</code> 表示<strong>粗體</strong>。</p>
 <figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">*斜體* 或 <span class="keyword">_</span>斜體<span class="keyword">_</span></div><div class="line">**粗體** 或 <span class="keyword">_</span>粗體<span class="keyword">_</span></div></pre></td></tr></table></figure>
-<h1 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線   "></a>分隔線   </h1><p>使用單行的 <code>___</code> 或是 <code>***</code> 表示。</p>
-<h1 id="分級標題"><a href="#分級標題" class="headerlink" title="分級標題  "></a>分級標題  </h1><p>使用<code>===</code>表示一級標題，使用<code>---</code>表示二級標題。<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">這是一個一級標題</span></div><div class="line">===</div><div class="line"><span class="section">這是一個二級標題</span></div><div class="line">---</div><div class="line">### 這個可以表示三級標題</div></pre></td></tr></table></figure></p>
-<p>也可用<code>#</code>來定義：</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/# H1  </div><div class="line">/## H2</div><div class="line">/### H3</div><div class="line">/#### H4</div><div class="line">/##### H5</div><div class="line">/###### H6</div></pre></td></tr></table></figure>
-<h1 id="刪除線"><a href="#刪除線" class="headerlink" title="刪除線  "></a>刪除線  </h1><p>使用的 <code>~~</code> 表示。<del>這句話刪除</del><br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~這句話刪除~~</div></pre></td></tr></table></figure></p>
-<h1 id="超鏈結寫法"><a href="#超鏈結寫法" class="headerlink" title="超鏈結寫法  "></a>超鏈結寫法  </h1><h2 id="文字超鏈接"><a href="#文字超鏈接" class="headerlink" title="文字超鏈接"></a>文字超鏈接</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="string">Link name</span>](<span class="link">URL</span>)</div></pre></td></tr></table></figure>
-<h2 id="圖片超鏈結寫法"><a href="#圖片超鏈結寫法" class="headerlink" title="圖片超鏈結寫法  "></a>圖片超鏈結寫法  </h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">！[<span class="string">PIC name</span>](<span class="link">PIC URL</span>)</div></pre></td></tr></table></figure>
-<h2 id="youtube-內嵌法"><a href="#Youtube-內嵌法" class="headerlink" title="Youtube 內嵌法  "></a>Youtube 內嵌法  </h2><p>直接插入<code>iframe</code> 代碼<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/js/youtube-autoresizer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">"640"</span> <span class="attr">height</span>=<span class="string">"360"</span> <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/HfElOZSEqn4"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h1 id="引用"><a href="#引用" class="headerlink" title="引用  "></a>引用  </h1><p>使用<code>&gt;</code> 表示<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash">為何一直失敗</span></div></pre></td></tr></table></figure></p>
+<p>使用的 <code>~~</code> 表示。<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">~~這句話刪除~~</div></pre></td></tr></table></figure></p>
+<p><del>這句話刪除</del>  </p>
+<h2 id="分隔線"><a href="#分隔線" class="headerlink" title="分隔線"></a>分隔線</h2><p>使用單行的 <code>___</code> 或是 <code>***</code> 表示。</p>
+<h2 id="分級標題"><a href="#分級標題" class="headerlink" title="分級標題"></a>分級標題</h2><p>使用<code>===</code>表示一級標題，使用<code>---</code>表示二級標題。<br><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="section">這是一個一級標題</span></div><div class="line">===</div><div class="line"><span class="section">這是一個二級標題</span></div><div class="line">---</div><div class="line">### 這個可以表示三級標題</div></pre></td></tr></table></figure></p>
+<p>也可用<code>#</code>來定義：<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/# H1  </div><div class="line">/## H2</div><div class="line">/### H3</div><div class="line">/#### H4</div><div class="line">/##### H5</div><div class="line">/###### H6</div></pre></td></tr></table></figure></p>
+<h2 id="超鏈結寫法"><a href="#超鏈結寫法" class="headerlink" title="超鏈結寫法"></a>超鏈結寫法</h2><h3 id="文字超鏈接"><a href="#文字超鏈接" class="headerlink" title="文字超鏈接"></a>文字超鏈接</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="string">Link name</span>](<span class="link">URL</span>)</div></pre></td></tr></table></figure>
+<p><a href="https://kelvin820.github.io/">This blog</a></p>
+<h3 id="圖片超鏈結寫法"><a href="#圖片超鏈結寫法" class="headerlink" title="圖片超鏈結寫法"></a>圖片超鏈結寫法</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">！[<span class="string">PIC name</span>](<span class="link">PIC URL</span>)</div></pre></td></tr></table></figure>
+<p><img src="http://www.cheatsheet.com/wp-content/uploads/2016/04/Yoda-in-Star-Wars-Revenge-of-the-Sith.jpg" alt="yoda"></p>
+<h3 id="youtube-內嵌法"><a href="#Youtube-內嵌法" class="headerlink" title="Youtube 內嵌法"></a>Youtube 內嵌法</h3><p>直接插入<code>iframe</code> 代碼<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"/js/youtube-autoresizer.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">width</span>=<span class="string">"640"</span> <span class="attr">height</span>=<span class="string">"360"</span> <span class="attr">src</span>=<span class="string">"https://www.youtube.com/embed/HfElOZSEqn4"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UtsfUAHkyWQ" frameborder="0" allowfullscreen></iframe>
+
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>使用<code>&gt;</code> 表示<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash">引用內文</span></div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>為何一直失敗  </p>
+<p>引用內文  </p>
 </blockquote>
-<h1 id="表格寫法"><a href="#表格寫法" class="headerlink" title="表格寫法  "></a>表格寫法  </h1><p>绘制表格格式如下，·<code>|</code>控制分列，<code>-</code> 控制分行，<code>:</code> 控制对齐方式。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> Item     </span>|<span class="string"> Value     </span>|<span class="string"> Qty   </span>|</div><div class="line">|<span class="string"> :------- </span>|<span class="string"> --------: </span>|<span class="string"> :---: </span>|</div><div class="line">|<span class="string"> Computer </span>|<span class="string"> 1600 USD  </span>|<span class="string"> 5     </span>|</div><div class="line">|<span class="string"> Phone    </span>|<span class="string"> 12 USD    </span>|<span class="string"> 12    </span>|</div><div class="line">|<span class="string"> Pipe     </span>|<span class="string"> 1 USD     </span>|<span class="string"> 234   </span>|</div></pre></td></tr></table></figure></p>
-<h1 id="check-list-的寫法"><a href="#Check-List-的寫法" class="headerlink" title="Check List 的寫法"></a>Check List 的寫法</h1><ul>
-<li>[ ] 支持以 PDF 格式导出文稿</li>
-<li>[ ] 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
-<li>[x] 新增 Todo 列表功能</li>
+<h2 id="bullet-list"><a href="#Bullet-list" class="headerlink" title="Bullet list"></a>Bullet list</h2><p>使用<em>，+，- 搭配一個</em>空白*表示<br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">* ite<span class="name">m1</span></div><div class="line">  *ite<span class="name">m1</span><span class="number">-1</span></div><div class="line">  *ite<span class="name">m1</span><span class="number">-2</span></div><div class="line">+ ite<span class="name">m2</span></div><div class="line">  +ite<span class="name">m2</span>-</div></pre></td></tr></table></figure></p>
+<ul>
+<li>item1<ul>
+<li>item1-1</li>
+<li>item1-2</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>item2<ul>
+<li>item2-</li>
+</ul>
+</li>
+</ul>
+<p>要使用數字的也可以，記得要數字加個<em>點</em>。Markdown厲害的是不用自己調，全寫1也可以自己排列正確。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span> item1</div><div class="line">  <span class="number">1.</span> item1<span class="number">-1</span></div><div class="line">  <span class="number">1.</span> item1<span class="number">-2</span></div><div class="line"><span class="number">1.</span> item2</div><div class="line">  <span class="number">1.</span> item2<span class="number">-1</span></div></pre></td></tr></table></figure></p>
+<ol>
+<li>item1<ol>
+<li>item1-1</li>
+<li>item1-2</li>
+</ol>
+</li>
+<li>item2<ol>
+<li>item2-1<h2 id="表格寫法"><a href="#表格寫法" class="headerlink" title="表格寫法"></a>表格寫法</h2></li>
+</ol>
+</li>
+</ol>
+<p>绘制表格格式如下，·<code>|</code>控制分列，<code>-</code> 控制分行，<code>:</code> 控制对齐方式。<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">|<span class="string"> Item     </span>|<span class="string"> Value     </span>|<span class="string"> Qty   </span>|</div><div class="line">|<span class="string"> :------- </span>|<span class="string"> --------: </span>|<span class="string"> :---: </span>|</div><div class="line">|<span class="string"> Computer </span>|<span class="string"> 1600 USD  </span>|<span class="string"> 5     </span>|</div><div class="line">|<span class="string"> Phone    </span>|<span class="string"> 12 USD    </span>|<span class="string"> 12    </span>|</div><div class="line">|<span class="string"> Pipe     </span>|<span class="string"> 1 USD     </span>|<span class="string"> 234   </span>|</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Item</th>
+<th style="text-align:right">Value</th>
+<th style="text-align:center">Qty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Computer</td>
+<td style="text-align:right">1600 USD</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:left">Phone</td>
+<td style="text-align:right">12 USD</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:left">Pipe</td>
+<td style="text-align:right">1 USD</td>
+<td style="text-align:center">234</td>
+</tr>
+</tbody>
+</table>
+<h2 id="check-list-寫法"><a href="#Check-list-寫法" class="headerlink" title="Check list 寫法"></a>Check list 寫法</h2><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby"> [ ] 新增 Todo 列表功能</span></div><div class="line">-<span class="ruby"> [x] 修复 LaTex 公式渲染问题</span></div><div class="line">-<span class="ruby"> [x] 新增 LaTex 公式编号功能</span></div></pre></td></tr></table></figure>
+<ul>
+<li>[ ] 新增 Todo 列表功能</li>
 <li>[x] 修复 LaTex 公式渲染问题</li>
 <li>[x] 新增 LaTex 公式编号功能</li>
 </ul>
-<h1 id="code-的寫法"><a href="#Code-的寫法" class="headerlink" title="Code 的寫法"></a>Code 的寫法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># A comment</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></div></pre></td></tr></table></figure>
-<h1 id="流程圖的寫法"><a href="#流程圖的寫法" class="headerlink" title="流程圖的寫法"></a>流程圖的寫法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: Start</div><div class="line">op=&gt;operation: Your Operation</div><div class="line">cond=&gt;condition: Yes or No?</div><div class="line">e=&gt;end</div><div class="line"></div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
-<h1 id="程序圖寫法"><a href="#程序圖寫法" class="headerlink" title="程序圖寫法"></a>程序圖寫法</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Alice-&gt;Bob: Hello Bob, how are you?</div><div class="line">Note right of Bob: Bob thinks</div><div class="line">Bob--&gt;Alice: I am good thanks!</div></pre></td></tr></table></figure>
+<h2 id="highlight-code"><a href="#Highlight-code" class="headerlink" title="Highlight code"></a>Highlight code</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@requires_authorization</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></div><div class="line">    <span class="keyword">pass</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    <span class="comment"># A comment</span></div><div class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;文章頭格式上面那些&quot;&gt;&lt;a href=&quot;#文章頭格式上面那些&quot; class=&quot;headerlink&quot; title=&quot;文章頭格式上面那些  &quot;&gt;&lt;/a&gt;文章頭格式上面那些  &lt;/h2&gt;&lt;p&gt;&lt;code&gt;fornt-matter&lt;/code&gt; 的格式說明&lt;br&gt;&lt;fi
+      &lt;h2 id=&quot;這個是-front-matter-的寫法&quot;&gt;&lt;a href=&quot;#這個是-front-matter-的寫法&quot; class=&quot;headerlink&quot; title=&quot;這個是 front-matter 的寫法&quot;&gt;&lt;/a&gt;這個是 front-matter 的寫法&lt;/h2&gt;&lt;
     
     </summary>
     
-      <category term="Tech" scheme="http://kelvin820.github.io/categories/Tech/"/>
+      <category term="Hexo" scheme="http://kelvin820.github.io/categories/Hexo/"/>
     
     
       <category term="Hexo" scheme="http://kelvin820.github.io/tags/Hexo/"/>
