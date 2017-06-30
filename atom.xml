@@ -124,12 +124,12 @@
     <title>Hello World 開頭第一篇</title>
     <link href="http://kelvin820.github.io/2017/06/24/hello-world/"/>
     <id>http://kelvin820.github.io/2017/06/24/hello-world/</id>
-    <published>2017-06-23T16:00:00.000Z</published>
-    <updated>2017-06-28T16:42:12.000Z</updated>
+    <published>2017-06-24T12:46:38.000Z</published>
+    <updated>2017-06-30T18:52:52.000Z</updated>
     
-    <content type="html"><![CDATA[<p>原本以為是個開開心心，簡簡單單的設置，結果天殺的MAC 似乎與node.js 有仇，用<code>npm install -g hexo-cli</code>不斷的悲劇error，查到後來有可能是node.js 用npm安裝的問題，似乎改用nvm裝就會沒事。現在我正安裝中，會不會也悲劇呢？</p>
+    <content type="html"><![CDATA[<h1 id="hello-world-開頭第一篇"><a href="#Hello-World-開頭第一篇" class="headerlink" title="Hello World 開頭第一篇"></a>Hello World 開頭第一篇</h1><p>原本以為是個開開心心，簡簡單單的設置，結果天殺的MAC 似乎與node.js 有仇，用<code>npm install -g hexo-cli</code>不斷的悲劇error，查到後來有可能是node.js 用npm安裝的問題，似乎改用nvm裝就會沒事。現在我正安裝中，會不會也悲劇呢？</p>
 <p>結果竟然順利完成了，什們<code>sudo npm install -g hexo-cli</code>都是屁，一點用也沒沒有，還是要換用<em>NVM</em>才行。</p>
-<h1 id="完整移除nodejs"><a href="#完整移除Node-js" class="headerlink" title="完整移除Node.js"></a>完整移除Node.js</h1><p>利用以下Script 移除不是用<em>NVM</em> 裝的Node</p>
+<h2 id="完整移除nodejs"><a href="#完整移除Node-js" class="headerlink" title="完整移除Node.js"></a>完整移除Node.js</h2><p>利用以下Script 移除不是用<em>NVM</em> 裝的Node</p>
 <p>first:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">lsbom -f -l -s -pf</div><div class="line">/var/db/receipts/org.nodejs.node.pkg.bom | <span class="keyword">while</span> read f; <span class="keyword">do</span>  sudo rm /usr/local/$&#123;f&#125;; done</div><div class="line">sudo rm -rf /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node</span></span></div><div class="line">/usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">node_modules</span></span></div><div class="line">/var/db/receipts/org.nodejs.*</div></pre></td></tr></table></figure></p>
 <p>To recap, the best way (I’ve found) to completely uninstall node + npm is to do the following:</p>
 <p>go to /usr/local/lib and delete any node and node_modules<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/<span class="class"><span class="keyword">lib</span></span></div><div class="line">sudo rm -rf node*</div></pre></td></tr></table></figure></p>
@@ -140,7 +140,7 @@
 <p>go to /usr/local/bin and delete any node executable</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">cd</span> /usr/<span class="keyword">local</span>/bin</div><div class="line">sudo <span class="keyword">rm</span> -rf /usr/<span class="keyword">local</span>/bin/npm</div><div class="line">sudo <span class="keyword">rm</span> -rf /usr/<span class="keyword">local</span>/bin/node</div><div class="line"><span class="keyword">ls</span> -las</div></pre></td></tr></table></figure>
 <p>you may need to do the additional instructions as well:<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo rm -rf /usr/local/share/man/man1/node.<span class="number">1</span></div><div class="line">sudo rm -rf /usr/local/<span class="class"><span class="keyword">lib</span>/<span class="title">dtrace</span>/<span class="title">node</span>.<span class="title">d</span></span></div><div class="line">sudo rm -rf ~<span class="regexp">/.npm</span></div></pre></td></tr></table></figure></p>
-<h1 id="hexo-安裝步驟"><a href="#Hexo-安裝步驟" class="headerlink" title="Hexo 安裝步驟  "></a>Hexo 安裝步驟  </h1><h2 id="step1-利用nvm裝nodejs"><a href="#Step1-利用NVM裝Node-js" class="headerlink" title="Step1 利用NVM裝Node.js  "></a>Step1 利用NVM裝Node.js  </h2><p>打開terminal，貼上下列script，裝上NVM</p>
+<h2 id="hexo-安裝步驟"><a href="#Hexo-安裝步驟" class="headerlink" title="Hexo 安裝步驟"></a>Hexo 安裝步驟</h2><h3 id="step1-利用nvm裝nodejs"><a href="#Step1-利用NVM裝Node-js" class="headerlink" title="Step1 利用NVM裝Node.js"></a>Step1 利用NVM裝Node.js</h3><p>打開terminal，貼上下列script，裝上NVM</p>
 <p><code>$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash</code></p>
 <p>裝好NVM后要加入路徑才能在shell下使用nvm，輸入下列指令來加入。</p>
 <p><code>$ echo &quot;source $(brew --prefix nvm)/nvm.sh&quot; &gt;&gt; .bash_profile</code></p>
@@ -148,25 +148,25 @@
 <p><code>$ . ~/.bash_profile</code> ，到此nvm安裝完成。</p>
 <p>接著要利用nvm裝Node.js，先用<code>nvm ls-rmote</code> 看版本，然後選一個喜歡的版本安裝<code>nvm install &lt;version&gt;</code>，接下來就是無止境的等待，不知道為何<em>npm</em> 與 <em>nvm</em> 的安裝速度差距如此巨大。</p>
 <p>PS. 如果要使用<em>nvm</em> 無痛換版，轉台<a href="http://icarus4.logdown.com/posts/175092-nodejs-installation-guide" target="_blank" rel="external">這裡</a>。</p>
-<h2 id="step2-利用homebrew-裝-git"><a href="#Step2-利用Homebrew-裝-Git" class="headerlink" title="Step2 利用Homebrew 裝 Git  "></a>Step2 利用Homebrew 裝 Git  </h2><p>打開terminal，貼上下列script</p>
+<h3 id="step2-利用homebrew-裝-git"><a href="#Step2-利用Homebrew-裝-Git" class="headerlink" title="Step2 利用Homebrew 裝 Git"></a>Step2 利用Homebrew 裝 Git</h3><p>打開terminal，貼上下列script</p>
 <p><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/instal</code></p>
 <p>使用Homebrew 裝git</p>
 <p><code>$ brew install git</code></p>
-<h2 id="step3-安裝hexo"><a href="#Step3-安裝Hexo" class="headerlink" title="Step3 安裝Hexo  "></a>Step3 安裝Hexo  </h2><p>利用<code>git --version</code>檢查git是否正確安裝。</p>
+<h3 id="step3-安裝hexo"><a href="#Step3-安裝Hexo" class="headerlink" title="Step3 安裝Hexo"></a>Step3 安裝Hexo</h3><p>利用<code>git --version</code>檢查git是否正確安裝。</p>
 <p>利用<code>npm --version</code>檢查node.js是否正確安裝。</p>
 <p>確認都沒問題后執行<code>npm install -g hexo-cli</code> ，安裝后可以利用<code>hexo -v</code> 確認是否正確安裝了。都沒問題后基本上系統已經假設完成。</p>
-<h2 id="step4-開個blog專用folder"><a href="#Step4-開個Blog專用Folder" class="headerlink" title="Step4 開個Blog專用Folder  "></a>Step4 開個Blog專用Folder  </h2><p>開個Folder當Blog 的root（要全空的），接著執行</p>
+<h3 id="step4-開個blog專用folder"><a href="#Step4-開個Blog專用Folder" class="headerlink" title="Step4 開個Blog專用Folder"></a>Step4 開個Blog專用Folder</h3><p>開個Folder當Blog 的root（要全空的），接著執行</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init <span class="symbol">&lt;folder&gt;</span></div><div class="line"><span class="keyword">cd</span> <span class="symbol">&lt;folder&gt;</span></div><div class="line">npm install</div></pre></td></tr></table></figure>
 <p>要更新Hexo可以使用<code>npm update</code>，要檢查package.json中配置的dependencies 版號可以使用<code>npm ls --depth=0</code></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;原本以為是個開開心心，簡簡單單的設置，結果天殺的MAC 似乎與node.js 有仇，用&lt;code&gt;npm install -g hexo-cli&lt;/code&gt;不斷的悲劇error，查到後來有可能是node.js 用npm安裝的問題，似乎改用nvm裝就會沒事。現在我正安裝中，
+      &lt;h1 id=&quot;hello-world-開頭第一篇&quot;&gt;&lt;a href=&quot;#Hello-World-開頭第一篇&quot; class=&quot;headerlink&quot; title=&quot;Hello World 開頭第一篇&quot;&gt;&lt;/a&gt;Hello World 開頭第一篇&lt;/h1&gt;&lt;p&gt;原本以為是個開開心心
     
     </summary>
     
-      <category term="Tech" scheme="http://kelvin820.github.io/categories/Tech/"/>
+      <category term="Hexo" scheme="http://kelvin820.github.io/categories/Hexo/"/>
     
     
       <category term="Hexo" scheme="http://kelvin820.github.io/tags/Hexo/"/>
