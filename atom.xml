@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-08-01T15:26:31.000Z</updated>
+  <updated>2017-08-01T15:41:34.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VR Vive light house 簡單原理說明</title>
+    <link href="http://kelvin820.github.io/2017/08/01/Vive-light-house/"/>
+    <id>http://kelvin820.github.io/2017/08/01/Vive-light-house/</id>
+    <published>2017-08-01T15:36:31.000Z</published>
+    <updated>2017-08-01T15:41:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>但是這位youtuber講錯了，其實一臺<em>light house</em>即可定位，不用兩臺同時開。</p>
+<p><script src="/js/youtube-autoresizer.js"></script></p>
+<iframe width="640" height="360" src="https://youtu.be/yf7sZx59dog" frameborder="0" allowfullscreen></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;但是這位youtuber講錯了，其實一臺&lt;em&gt;light house&lt;/em&gt;即可定位，不用兩臺同時開。&lt;/p&gt;
+&lt;p&gt;&lt;script src=&quot;/js/youtube-autoresizer.js&quot;&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;iframe width=&quot;640&quot; h
+    
+    </summary>
+    
+      <category term="VR" scheme="http://kelvin820.github.io/categories/VR/"/>
+    
+    
+      <category term="VR" scheme="http://kelvin820.github.io/tags/VR/"/>
+    
+      <category term="trackinh" scheme="http://kelvin820.github.io/tags/trackinh/"/>
+    
+  </entry>
   
   <entry>
     <title>HEXO 備忘指南（3）| Hexo 發文流程</title>
