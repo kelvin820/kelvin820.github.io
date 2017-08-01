@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-08-01T15:44:30.000Z</updated>
+  <updated>2017-08-01T16:10:08.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ready_player_one</title>
+    <link href="http://kelvin820.github.io/2017/08/02/Ready-player-one/"/>
+    <id>http://kelvin820.github.io/2017/08/02/Ready-player-one/</id>
+    <published>2017-08-01T16:02:32.000Z</published>
+    <updated>2017-08-01T16:10:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>來了，想三年前，Michael Abrash 說他怎麼因為這本書爾想做VR，現在書都拍成電影了，Oculus也賣給Facebook，雖然當初Michael Abrash風光跳槽，現在統治VR的確實Valve，然後我們的VR根本難產，這個局該怎麼破？！</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0h3zL-IA_KI" frameborder="0" allowfullscreen></iframe>
+
+<p>回顧Miahael Abrash的 VR 技術預言，他還在Valve的時候給的talk</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G-2dQoeqVVo" frameborder="0" allowfullscreen></iframe>
+
+<p><img src="https://i.pinimg.com/564x/ef/b7/8a/efb78a6bf077e292c9a4c68728182303.jpg" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;來了，想三年前，Michael Abrash 說他怎麼因為這本書爾想做VR，現在書都拍成電影了，Oculus也賣給Facebook，雖然當初Michael Abrash風光跳槽，現在統治VR的確實Valve，然後我們的VR根本難產，這個局該怎麼破？！&lt;/p&gt;
+&lt;iframe
+    
+    </summary>
+    
+      <category term="VR" scheme="http://kelvin820.github.io/categories/VR/"/>
+    
+    
+      <category term="VR" scheme="http://kelvin820.github.io/tags/VR/"/>
+    
+      <category term="movie" scheme="http://kelvin820.github.io/tags/movie/"/>
+    
+  </entry>
   
   <entry>
     <title>VR Vive light house 簡單原理說明</title>
