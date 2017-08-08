@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kelvin820.github.io/"/>
-  <updated>2017-08-08T16:03:02.000Z</updated>
+  <updated>2017-08-08T16:04:24.000Z</updated>
   <id>http://kelvin820.github.io/</id>
   
   <author>
@@ -16,13 +16,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Nike_Fuelband 拆機</title>
+    <title>Nike Fuelband 拆機</title>
     <link href="http://kelvin820.github.io/2017/08/08/Nike-Fuelband/"/>
     <id>http://kelvin820.github.io/2017/08/08/Nike-Fuelband/</id>
     <published>2017-08-07T23:58:18.000Z</published>
-    <updated>2017-08-08T16:03:02.000Z</updated>
+    <updated>2017-08-08T16:04:24.000Z</updated>
     
     <content type="html"><![CDATA[<iframe width="560" height="315" src="https://www.youtube.com/embed/7xdajSS_cOU" frameborder="0" allowfullscreen></iframe>
+
 
 <p><img src="https://www.chipworks.com/sites/default/files/wpblog/WM0105-001_9E.jpg" alt="teardown1">  </p>
 <p><img src="https://www.chipworks.com/sites/default/files/wpblog/WM0105-001_11E.jpg" alt="teardown2">  </p>
@@ -33,7 +34,8 @@
     
       &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/7xdajSS_cOU&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;img src=&quot;htt
+
+&lt;p&gt;&lt;img src=&quot;ht
     
     </summary>
     
@@ -43,6 +45,8 @@
       <category term="wearable" scheme="http://kelvin820.github.io/tags/wearable/"/>
     
       <category term="nike" scheme="http://kelvin820.github.io/tags/nike/"/>
+    
+      <category term="teardown" scheme="http://kelvin820.github.io/tags/teardown/"/>
     
   </entry>
   
