@@ -1,7 +1,7 @@
 ---
 import { profile } from '../data/profile';
 import '../styles/global.css';
-const { title = `${profile.name} — Technology & Partnerships`, description = profile.introduction, resume = false } = Astro.props;
+const { title = `${profile.name} — Technology & Partnerships`, description = profile.introduction, resume = false, portfolio = false } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -18,7 +18,7 @@ const { title = `${profile.name} — Technology & Partnerships`, description = p
     <meta property="og:url" content={new URL(Astro.url.pathname, profile.website)} />
     <title>{title}</title>
   </head>
-  <body class:list={[resume && 'resume-body']}>
+  <body class:list={[resume && 'resume-body', portfolio && 'portfolio-page']}>
     <a class="skip-link" href="#main">Skip to content</a>
     <slot />
   </body>

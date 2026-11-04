@@ -13,9 +13,22 @@ pnpm build
 pnpm preview
 ```
 
+On this Windows computer, `./start-preview.ps1` also launches the local website at `http://127.0.0.1:4321/`, using an installed Node.js or the Codex bundled runtime. `./start-preview.ps1 -Build` builds without starting the server. Keep the preview terminal open while browsing; Ctrl+C stops it.
+
 Only source code and the dependency lockfile are maintained. `dist/`, `node_modules/`, and local QA artifacts are ignored. `pnpm build` writes the site to `dist/`. No backend, database, paid service, or LinkedIn scraping is required.
 
 ## Update content
+
+The redesigned homepage is aimed at recruiters and employers. It includes an expertise explorer, expandable career timeline, English / 中文 content toggle, light / dark theme, mobile navigation and an industry-report portfolio entry. Homepage display preferences are stored locally in the visitor's browser; no analytics or tracking is added.
+
+### Industry reports
+
+Add published reports to `src/data/reports.ts`. Each item has `title`, `description`, `category`, and `url`; optional `date`, `zhTitle`, and `zhDescription`. Both the homepage and `/reports/` render from this list. An empty list displays an explicit “Coming soon” link to the collection page. Do not add fictional example reports or nonfunctional external links.
+
+```ts
+// Shape only — replace with actual owner-supplied information before adding:
+// { title, description, category, url, zhTitle?, zhDescription?, date? }
+```
 
 Edit `src/data/profile.ts` or ask Codex to update it. This updates both pages. Chinese translations are in `src/data/resume.ts`; keep them synchronized when editing English descriptions. The résumé provides English / 中文 buttons and shareable `?lang=en` / `?lang=zh` URLs. Keep dates, titles and claims traceable to owner-provided material. The résumé's **Print / Save PDF** button opens the browser print dialog. Only the selected language prints. Select A4 and disable browser headers/footers. CSS handles print margins, page breaks and contact links. This desktop app's embedded browser may not support native printing; open the URL in Chrome or Edge to use the system print dialog.
 

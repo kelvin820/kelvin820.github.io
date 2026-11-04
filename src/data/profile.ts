@@ -8,6 +8,7 @@ export const profile = {
   initials: "KC",
   role: "Technology Scouting & R&D Partnerships",
   position: "Director · XUNWEI Technologies",
+  positionZh: "總監 · XUNWEI Technologies",
   location: "Taipei, Taiwan",
   email: "kelvin820@gmail.com",
   linkedin: "https://www.linkedin.com/in/changkaimau/",
@@ -15,8 +16,15 @@ export const profile = {
   website: "https://kelvin820.github.io",
   headline: "Connecting technology. Creating possibilities.",
   introduction: "Exploring emerging technologies and connecting the people, ideas, and R&D partnerships that move communication solutions forward.",
+  introductionZh: "探索新興技術，連結人才、想法與研發夥伴，共同推動通訊解決方案的下一步。",
   summary: "Technology scouting and R&D partnerships professional with a background in electrical and RF engineering. Experienced in Wi-Fi, Bluetooth, mobile communications, and VR system design, including HMD and HMI. Collaborates with internal and external R&D teams to explore emerging technologies and develop communication solutions.",
   about: "My work sits at the intersection of technology exploration and engineering collaboration. I gather emerging technologies and solutions, connect internal and external R&D teams, and build partnerships that create value for businesses and customers. My engineering background spans mobile RF design, wireless products, virtual reality, and autonomous vehicle technology exploration.",
+  aboutZh: "我的工作介於技術探索與工程協作之間：掌握新興技術與解決方案，連結內外部研發團隊，建立為企業與客戶創造價值的合作關係。工程背景涵蓋行動通訊射頻設計、無線產品、虛擬實境，以及自動駕駛技術探索。",
+  focusZh: [
+    {title:"技術探索與研發合作",text:"探索新興技術、技術尋源與規劃，連結內部與外部研發團隊。"},
+    {title:"無線通訊與射頻",text:"具備行動通訊平台、WLAN、藍牙模組、60 GHz WiHD 與 LTE 產品的工程實務經驗。"},
+    {title:"沉浸式與新興系統",text:"探索 VR 生態系的 HMD、光學與追蹤技術，以及自動駕駛的感測與模擬技術。"},
+  ],
   skills: ["Technology scouting", "R&D partnerships", "WLAN / Wi-Fi", "RF engineering", "Embedded systems", "Bluetooth", "Mobile communications", "VR / HMD / HMI"],
   focus: [
     { number: "01", title: "Technology & partnerships", text: "Emerging technology exploration, technology sourcing and planning, and collaboration across internal and external R&D teams.", detail: "SCOUT · CONNECT · DEVELOP" },

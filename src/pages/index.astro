@@ -4,29 +4,64 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Experience from '../components/Experience.astro';
 import { profile } from '../data/profile';
+import { resumes } from '../data/resume';
+import Text from '../components/Text.astro';
+import { reports } from '../data/reports';
+import '../styles/portfolio.css';
 ---
-<Layout>
-  <Header />
+<Layout portfolio>
+  <Header home />
   <main id="main">
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow"><span class="small-line"></span> TECHNOLOGY · ENGINEERING · PARTNERSHIPS</p>
-        <p class="hero-name">Hello, I’m Kaimau.</p>
-        <h1>Connecting<br />technology.<br /><span>Creating possibilities.</span></h1>
-        <p class="hero-description">{profile.introduction}</p>
-        <div class="hero-actions"><a class="button button-dark" href="#experience">Explore my experience <span aria-hidden="true">↓</span></a><a class="text-link" href="/resume/">View résumé <span aria-hidden="true">↗</span></a></div>
+    <section class="p-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span><Text en="TAIPEI, TAIWAN · TECHNOLOGY & R&D" zh="台灣・台北 · 技術探索與研發" /></p>
+        <h1 id="hero-title">Kaimau<br /><span>Chang.</span><span class="name-period" aria-hidden="true">↗</span></h1>
+        <p class="hero-role"><Text en={profile.role} zh={resumes.zh.role} /></p>
+        <p class="p-hero-intro"><Text en={profile.introduction} zh={profile.introductionZh} /></p>
+        <div class="p-actions"><a class="button button-dark" href="/resume/"><Text en="View my résumé" zh="查看我的履歷" /><span aria-hidden="true">↗</span></a><a class="text-link" href={`mailto:${profile.email}`}><Text en="Let’s talk" zh="與我聯絡" /> <span aria-hidden="true">↗</span></a></div>
+        <a class="hero-reports-link" href="#reports"><span aria-hidden="true">▤</span><Text en="Industry reports & perspectives" zh="產業報告與研究觀點" /><span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span class="orbit-node node-one"></span><span class="orbit-node node-two"></span><span class="orbit-node node-three"></span><div class="art-core">KC<span>THE NEXT CONNECTION</span></div><span class="art-caption">IDEAS → CONNECTIONS → POSSIBILITIES</span></div>
-      <div class="hero-bottom"><span><span class="location-dot"></span>{profile.location}</span><span>{profile.position}</span><a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      <div class="expertise-console">
+        <div class="console-top"><span><span class="live-dot"></span> EXPERTISE EXPLORER</span><span>KC / 01</span></div>
+        <div class="signal-map" aria-hidden="true"><div class="map-grid"></div><svg viewBox="0 0 500 290" fill="none"><path class="map-route" d="M75 80H180L250 145H340V225H430M75 225H180L250 145V65H425"/><circle cx="250" cy="145" r="48"/><circle cx="250" cy="145" r="65" class="map-dashed"/><circle cx="75" cy="80" r="5"/><circle cx="75" cy="225" r="5"/><circle cx="430" cy="225" r="5"/><circle cx="425" cy="65" r="5"/></svg><span class="map-label ml-one">TECHNOLOGY</span><span class="map-label ml-two">ENGINEERING</span><span class="map-label ml-three">PARTNERSHIPS</span><span class="map-label ml-four">POSSIBILITIES</span><span class="map-center">KC<span>CONNECTING THE DOTS</span></span></div>
+        <div class="expertise-selector" aria-label="Explore areas of expertise">{profile.focus.map((focus, i) => <button type="button" class="expertise-choice" data-focus={i} aria-pressed={i === 0} aria-controls={`expertise-panel-${i}`}><span>0{i + 1}</span><Text en={['Technology','Wireless / RF','VR & sensing'][i]} zh={['技術與合作','無線／射頻','VR 與感測'][i]} /></button>)}</div>
+        <div class="expertise-panels" aria-live="polite">{profile.focus.map((focus, i) => <div id={`expertise-panel-${i}`} data-focus-panel={i} hidden={i !== 0}><p class="console-detail">{focus.detail}</p><h2><Text en={focus.title} zh={profile.focusZh[i].title} /></h2><p><Text en={focus.text} zh={profile.focusZh[i].text} /></p></div>)}</div>
+      </div>
     </section>
-    <section id="about" class="section about-section">
-      <div class="about-heading"><p class="eyebrow">01 / A LITTLE ABOUT ME</p><h2>Curiosity meets<br /><span>engineering.</span></h2></div>
-      <div class="about-copy"><p>{profile.about}</p><div class="skills" aria-label="Areas of expertise">{profile.skills.map(skill => <span>{skill}</span>)}</div></div>
+    <div class="career-strip" aria-label="Career background"><span><Text en="CAREER ACROSS" zh="歷年任職" /></span><div>{['XUNWEI','Huawei','MediaTek','Foxconn','Compal'].map(company => <span>{company}</span>)}</div></div>
+    <section id="about" class="p-section p-about">
+      <div class="p-section-title"><p class="eyebrow"><Text en="01 / PROFESSIONAL PROFILE" zh="01 / 專業背景" /></p><h2><Text en="Engineering depth." zh="工程深度，" /><br /><em><Text en="A wider perspective." zh="更寬廣的視角。" /></em></h2></div>
+      <div class="p-about-copy"><p><Text en={profile.about} zh={profile.aboutZh} /></p><div class="p-profile-meta"><div><span><Text en="CURRENT ROLE" zh="目前職務" /></span><strong><Text en={profile.position} zh={profile.positionZh} /></strong></div><div><span><Text en="EDUCATION" zh="學歷" /></span><strong><Text en={`${profile.education.degree} · ${profile.education.school}`} zh={`${resumes.zh.education.degree} · ${resumes.zh.education.school}`} /></strong></div></div><div class="skills" aria-label="Areas of expertise">{profile.skills.map(skill => <span>{skill}</span>)}</div></div>
     </section>
-    <section class="focus-section" aria-label="Areas of focus">{profile.focus.map(item => <article class="focus-item"><span class="focus-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p><span class="focus-detail">{item.detail}</span></article>)}</section>
     <Experience />
-    <section class="section education-section"><div><p class="eyebrow">03 / EDUCATION</p><h2>An engineering foundation.</h2></div><div class="education-detail"><h3>{profile.education.school}</h3><p>{profile.education.degree}</p><span>{profile.education.start} — {profile.education.end}</span></div></section>
-    <section id="contact" class="contact-section"><p class="eyebrow">LET’S CONNECT</p><h2>The next possibility<br />starts with a conversation.</h2><div class="contact-actions"><a class="button button-dark" href={`mailto:${profile.email}`}>Get in touch <span aria-hidden="true">↗</span></a><a class="text-link" href={profile.linkedin} target="_blank" rel="noreferrer">Find me on LinkedIn ↗</a></div></section>
+    <section id="reports" class="p-section reports-section" aria-labelledby="reports-heading"><div class="p-section-title"><p class="eyebrow"><Text en="03 / WRITING & RESEARCH" zh="03 / 研究與作品" /></p><h2 id="reports-heading"><Text en="Industry perspectives." zh="產業報告與研究觀點。" /></h2><p class="section-deck"><Text en="A collection of my industry reports and technology perspectives." zh="在這裡分享我撰寫的產業報告與技術觀點。" /></p></div>
+      {reports.length > 0 ? <div class="report-grid">{reports.map(report => <a class="report-card" href={report.url} target="_blank" rel="noreferrer"><p class="eyebrow">{report.category}</p><h3><Text en={report.title} zh={report.zhTitle || report.title} /></h3><p><Text en={report.description} zh={report.zhDescription || report.description} /></p><span class="report-read"><Text en="Read report" zh="閱讀報告" /> ↗</span></a>)}</div> : <a class="report-placeholder" href="/reports/"><div class="report-cover" aria-hidden="true"><span>KC / RESEARCH</span><div class="cover-line"></div><strong>Ideas.<br />Context.<br /><em>Perspective.</em></strong><span>INDUSTRY REPORTS & ANALYSIS</span></div><div class="report-placeholder-copy"><span class="coming-label"><span class="live-dot"></span><Text en="COMING SOON" zh="即將公開" /></span><h3><Text en="A closer look at what’s next." zh="深入探索，下一個產業趨勢。" /></h3><p><Text en="My industry reports will be collected here as they become available. Visit the collection for future additions." zh="我撰寫的產業報告將陸續收錄於此。點此進入報告專區，後續將持續新增作品。" /></p><span class="report-read"><Text en="Explore the collection" zh="前往產業報告專區" /><span aria-hidden="true">↗</span></span></div></a>}
+    </section>
+    <section id="contact" class="p-contact"><div><p class="eyebrow"><Text en="LET’S CONNECT" zh="與我聯絡" /></p><h2><Text en="Let’s discuss" zh="一起聊聊" /><br /><em><Text en="the next opportunity." zh="下一個機會。" /></em></h2><p><Text en="For career opportunities and professional conversations." zh="歡迎獵頭、招募團隊與專業夥伴聯繫。" /></p></div><div class="p-contact-links"><a href={`mailto:${profile.email}`}><span><small>EMAIL</small>{profile.email}</span><span aria-hidden="true">↗</span></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><span><small>LINKEDIN</small><Text en="Connect with Kaimau" zh="與 Kaimau 建立聯繫" /></span><span aria-hidden="true">↗</span></a><a href="/resume/"><span><small><Text en="RÉSUMÉ" zh="履歷" /></small><Text en="Print-friendly CV · EN / 中文" zh="單頁列印履歷 · EN / 中文" /></span><span aria-hidden="true">↗</span></a></div></section>
   </main>
-  <footer class="site-footer"><span>© {new Date().getFullYear()} {profile.name}</span><div><a href="/resume/">Printable résumé</a><a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a><a href="/legacy/">Legacy archive</a></div></footer>
+  <footer class="site-footer"><span>© {new Date().getFullYear()} {profile.name}</span><div><a href="/reports/"><Text en="Industry reports" zh="產業報告" /></a><a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a><a href="/legacy/"><Text en="Legacy archive" zh="舊站備份" /></a></div><a href="#main" class="back-top"><Text en="Back to top" zh="回到頂端" /> ↑</a></footer>
+  <script>
+    let language = 'en';
+    const languageButton = document.querySelector<HTMLButtonElement>('#home-language');
+    function setLanguage(next: string) {
+      language = next === 'zh' ? 'zh' : 'en';
+      document.documentElement.lang = language === 'zh' ? 'zh-Hant' : 'en';
+      document.querySelectorAll<HTMLElement>('[data-en][data-zh]').forEach(element => { element.textContent = language === 'zh' ? element.dataset.zh! : element.dataset.en!; });
+      if(languageButton) { languageButton.textContent = language === 'zh' ? 'EN' : '中文'; languageButton.setAttribute('aria-label', language === 'zh' ? 'Switch homepage to English' : '切換為中文首頁'); }
+      document.querySelectorAll<HTMLAnchorElement>('a[href^="/resume/"]').forEach(link => { link.href = `/resume/?lang=${language}`; });
+      try { localStorage.setItem('homepage-language', language); } catch {}
+    }
+    languageButton?.addEventListener('click', () => setLanguage(language === 'en' ? 'zh' : 'en'));
+    const params = new URLSearchParams(location.search);
+    let savedLanguage = 'en'; try { savedLanguage = localStorage.getItem('homepage-language') || 'en'; } catch {}
+    setLanguage(params.get('lang') || savedLanguage);
+    const themeButton = document.querySelector<HTMLButtonElement>('#theme-toggle');
+    function setTheme(dark: boolean) { document.documentElement.dataset.theme = dark ? 'dark' : 'light'; themeButton?.setAttribute('aria-pressed', String(dark)); themeButton?.setAttribute('aria-label', dark ? 'Switch to light theme / 切換淺色' : 'Switch to dark theme / 切換深色'); try { localStorage.setItem('homepage-theme', dark ? 'dark' : 'light'); } catch {} }
+    let savedTheme: string | null = null; try { savedTheme = localStorage.getItem('homepage-theme'); } catch {}
+    setTheme(savedTheme ? savedTheme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches);
+    themeButton?.addEventListener('click', () => setTheme(document.documentElement.dataset.theme !== 'dark'));
+    document.querySelectorAll<HTMLButtonElement>('[data-focus]').forEach(button => button.addEventListener('click', () => { document.querySelectorAll('[data-focus]').forEach(item => item.setAttribute('aria-pressed', String(item === button))); document.querySelectorAll<HTMLElement>('[data-focus-panel]').forEach(panel => { panel.hidden = panel.dataset.focusPanel !== button.dataset.focus; }); }));
+    const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if(entry.isIntersecting) { document.querySelectorAll('[data-section]').forEach(link => { if(link.getAttribute('data-section') === entry.target.id) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); }); } }); }, {rootMargin:'-15% 0px -55% 0px'});
+    document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+  </script>
 </Layout>
