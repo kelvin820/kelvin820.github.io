@@ -1,0 +1,2 @@
+# Preserve the supplied report source byte-for-byte, including its line endings.
+content/reports/*.html -text

@@ -2,5 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { reports } from '../../data/reports';
+import ReportCards from '../../components/ReportCards.astro';
+import '../../styles/portfolio.css';
 ---
-<Layout title="Industry reports / 產業報告 — Kaimau Chang"><Header /><main id="main" class="archive-page"><p class="eyebrow">WRITING & RESEARCH / 研究與作品</p><h1>Industry reports.<br />產業報告</h1>{reports.length ? reports.map(report => <article style="margin: 32px 0"><p class="eyebrow">{report.category}</p><h2 style="font-size:24px;margin:12px 0"><a href={report.url} target="_blank" rel="noreferrer">{report.title} ↗</a></h2><p>{report.description}</p></article>) : <><p>Coming soon. This collection will feature my industry reports and technology perspectives as they become available.</p><p>報告即將陸續上架。此專區將收錄我撰寫的產業報告與技術觀點，目前尚未公開作品。</p></>}<a class="button button-dark" href="/#reports">Back to portfolio / 返回作品集 ↗</a></main></Layout>
+<Layout title="Industry reports / 產業報告 — Kaimau Chang" portfolio>
+  <Header />
+  <main id="main" class="reports-index">
+    <p class="eyebrow">WRITING & RESEARCH / 研究與作品</p>
+    <h1>Industry perspectives.<span>產業報告與研究觀點</span></h1>
+    <p class="section-deck">A collection of my industry reports and technology perspectives.<br />我撰寫的產業研究與技術觀點，持續更新。</p>
+    {reports.length ? <ReportCards bilingual /> : <p class="section-deck">Coming soon / 報告即將陸續上架。</p>}
+    <a class="text-link reports-back" href="/#reports">← Back to portfolio / 返回首頁作品集</a>
+  </main>
+</Layout>

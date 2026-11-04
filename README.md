@@ -23,6 +23,10 @@ The redesigned homepage is aimed at recruiters and employers. It includes an exp
 
 ### Industry reports
 
+Brand colors supplied by the owner: primary **#05164D**, accent **#FFAD00**. Preserve the existing portfolio structure and interactions when applying these colors. Yellow is used on navy or as decoration; body text on light backgrounds stays navy for legibility.
+
+The first hosted report is `/reports/ceatec-2026/`. Its unmodified owner-supplied HTML is in `content/reports/ceatec-2026.html`. Edit that source, then run `pnpm build` or `pnpm dev`. `scripts/build-reports.mjs` compiles report-only Tailwind 3 styles and copies pinned Chart.js and Font Awesome assets into the ignored generated `public/reports/ceatec-2026/` directory. Astro includes these files in the build. Do not edit generated files. Source report body, chart values and source links are retained; the generated version adds site navigation and an accessible chart-data table. External reference links remain external, but rendering requires no third-party CDN scripts or fonts.
+
 Add published reports to `src/data/reports.ts`. Each item has `title`, `description`, `category`, and `url`; optional `date`, `zhTitle`, and `zhDescription`. Both the homepage and `/reports/` render from this list. An empty list displays an explicit “Coming soon” link to the collection page. Do not add fictional example reports or nonfunctional external links.
 
 ```ts
