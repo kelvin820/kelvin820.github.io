@@ -1,0 +1,12 @@
+---
+import { profile } from '../data/profile';
+---
+<section id="experience" class="section experience-section">
+  <div class="section-heading"><div><p class="eyebrow">02 / THE JOURNEY</p><h2>Built on experience.</h2></div><p>From RF design to technology exploration<br />and R&D partnerships.</p></div>
+  <div class="experience-list">
+    {profile.experience.map((job, i) => <article class="experience-row">
+      <div class="job-date"><span class:list={['timeline-dot', i === 0 && 'current']}></span>{job.start} — {job.end}</div>
+      <div class="job-details"><div class="job-heading"><h3>{job.company}</h3>{i === 0 && <span class="current-label">CURRENT</span>}</div><p class="job-title">{job.title}</p>{job.bullets.length > 0 && <ul>{job.bullets.map(bullet => <li>{bullet}</li>)}</ul>}</div>
+    </article>)}
+  </div>
+</section>

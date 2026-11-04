@@ -1,0 +1,11 @@
+---
+import { profile } from '../data/profile';
+const { resume = false } = Astro.props;
+---
+<header class="site-header">
+  <a class="wordmark" href="/" aria-label="Kaimau Chang home"><span class="monogram">{profile.initials}<span>.</span></span><span class="wordmark-name">KAIMAU CHANG</span></a>
+  <nav aria-label="Main navigation">
+    <a href="/#about">About</a><a href="/#experience">Experience</a>
+    <a class:list={['nav-resume', resume && 'active']} href="/resume/">Résumé <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>

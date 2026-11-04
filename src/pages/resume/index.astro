@@ -1,0 +1,40 @@
+---
+// Astro port of the semantic, single-column, print-friendly section structure
+// in BartoszJarocki/cv: Header, Summary, WorkExperience, Education and Skills.
+// Original MIT license retained in licenses/cv-MIT.txt.
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { profile } from '../../data/profile';
+import { resumes } from '../../data/resume';
+---
+<Layout title={`${profile.name} — Résumé`} description={profile.summary} resume>
+  <div class="no-print"><Header resume /></div>
+  <div class="resume-toolbar no-print"><div class="language-switch" aria-label="履歷語言 / Resume language"><button type="button" data-language="en" aria-pressed="true">English</button><button type="button" data-language="zh" aria-pressed="false">中文</button></div><button id="print-resume" class="button button-dark" type="button"><span id="print-label">Print / Save PDF</span> <span aria-hidden="true">↗</span></button></div>
+  <main id="main" class="resume-sheet">
+  {Object.entries(resumes).map(([key, profile]) => <div class="cv-language" data-cv-language={key} lang={profile.lang} hidden={key !== 'en'}>
+    <header class="resume-header"><div><p class="resume-eyebrow">TECHNOLOGY · ENGINEERING · PARTNERSHIPS</p><h1>{profile.name}</h1><p class="resume-role">{profile.role}</p><p class="resume-location">{profile.location}</p></div><div class="resume-monogram" aria-hidden="true">KC<span>.</span></div></header>
+    <div class="resume-contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.linkedin}>linkedin.com/in/changkaimau</a><a href={profile.website}>kelvin820.github.io</a></div>
+    <section class="cv-section" aria-labelledby={`${key}-summary`}><h2 id={`${key}-summary`}>{profile.labels.profile}</h2><p>{profile.summary}</p></section>
+    <section class="cv-section" aria-labelledby={`${key}-work`}><h2 id={`${key}-work`}>{profile.labels.experience}</h2><div class="cv-jobs">{profile.experience.map(job => <article class="cv-job"><div class="cv-job-heading"><h3>{job.company}</h3><span>{job.start} — {job.end}</span></div><p class="cv-job-title">{job.title}</p>{job.bullets.length > 0 && <ul>{job.bullets.map(bullet => <li>{bullet}</li>)}</ul>}</article>)}</div></section>
+    <section class="cv-section" aria-labelledby={`${key}-education`}><h2 id={`${key}-education`}>{profile.labels.education}</h2><article><div class="cv-job-heading"><h3>{profile.education.school}</h3><span>{profile.education.start} — {profile.education.end}</span></div><p class="cv-job-title">{profile.education.degree}</p></article></section>
+    <section class="cv-section" aria-labelledby={`${key}-skills`}><h2 id={`${key}-skills`}>{profile.labels.skills}</h2><p class="cv-skills">{profile.skills.join(' · ')}</p></section>
+    <footer class="resume-footer"><span>{profile.name}</span><span>{profile.website.replace('https://', '')}</span></footer>
+  </div>)}
+  </main>
+  <p class="print-hint no-print">For PDF: choose “Save as PDF” in the print dialog. A4 layout is automatic; turn off browser headers and footers.</p>
+  <script>
+    function setLanguage(language: string) {
+      const selected = language === 'zh' ? 'zh' : 'en';
+      document.querySelectorAll<HTMLElement>('[data-cv-language]').forEach(section => { section.hidden = section.dataset.cvLanguage !== selected; });
+      document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.language === selected)));
+      document.documentElement.lang = selected === 'zh' ? 'zh-Hant' : 'en';
+      document.querySelector('#print-label')!.textContent = selected === 'zh' ? '列印／存成 PDF' : 'Print / Save PDF';
+      document.querySelector('.print-hint')!.textContent = selected === 'zh' ? '儲存 PDF：請在列印視窗選擇「另存為 PDF」，紙張使用 A4，並關閉瀏覽器頁首及頁尾。' : 'For PDF: choose “Save as PDF” in the print dialog. Use A4 and turn off browser headers and footers.';
+      const url = new URL(window.location.href); url.searchParams.set('lang', selected); history.replaceState(null, '', url);
+    }
+    document.querySelectorAll<HTMLButtonElement>('[data-language]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language!)));
+    const initial = new URLSearchParams(location.search).get('lang');
+    if(initial) setLanguage(initial);
+    document.querySelector('#print-resume')?.addEventListener('click', () => window.print());
+  </script>
+</Layout>

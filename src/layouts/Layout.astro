@@ -1,0 +1,25 @@
+---
+import { profile } from '../data/profile';
+import '../styles/global.css';
+const { title = `${profile.name} — Technology & Partnerships`, description = profile.introduction, resume = false } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f8fa" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, profile.website)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, profile.website)} />
+    <title>{title}</title>
+  </head>
+  <body class:list={[resume && 'resume-body']}>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <slot />
+  </body>
+</html>
