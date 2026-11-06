@@ -1,5 +1,6 @@
 ---
 // Portfolio architecture adapted from RyanFitzgerald/devportfolio (MIT).
+import portrait from '../assets/kaimau-chang.jpg';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Experience from '../components/Experience.astro';
@@ -9,8 +10,9 @@ import Text from '../components/Text.astro';
 import { reports } from '../data/reports';
 import ReportCards from '../components/ReportCards.astro';
 import '../styles/portfolio.css';
+import '../styles/homepage.css';
 ---
-<Layout portfolio>
+<Layout portfolio homepage>
   <Header home />
   <main id="main">
     <section class="p-hero" aria-labelledby="hero-title">
@@ -24,7 +26,9 @@ import '../styles/portfolio.css';
       </div>
       <div class="expertise-console">
         <div class="console-top"><span><span class="live-dot"></span> EXPERTISE EXPLORER</span><span>KC / 01</span></div>
-        <div class="signal-map" aria-hidden="true"><div class="map-grid"></div><svg viewBox="0 0 500 290" fill="none"><path class="map-route" d="M75 80H180L250 145H340V225H430M75 225H180L250 145V65H425"/><circle cx="250" cy="145" r="48"/><circle cx="250" cy="145" r="65" class="map-dashed"/><circle cx="75" cy="80" r="5"/><circle cx="75" cy="225" r="5"/><circle cx="430" cy="225" r="5"/><circle cx="425" cy="65" r="5"/></svg><span class="map-label ml-one">TECHNOLOGY</span><span class="map-label ml-two">ENGINEERING</span><span class="map-label ml-three">PARTNERSHIPS</span><span class="map-label ml-four">POSSIBILITIES</span><span class="map-center">KC<span>CONNECTING THE DOTS</span></span></div>
+        <div class="hero-portrait">
+          <img src={portrait.src} alt={`${profile.name} — 個人肖像 / Portrait`} width={portrait.width} height={portrait.height} loading="eager" fetchpriority="high" decoding="async" />
+        </div>
         <div class="expertise-selector" aria-label="Explore areas of expertise">{profile.focus.map((focus, i) => <button type="button" class="expertise-choice" data-focus={i} aria-pressed={i === 0} aria-controls={`expertise-panel-${i}`}><span>0{i + 1}</span><Text en={['Technology','Wireless / RF','VR & sensing'][i]} zh={['技術與合作','無線／射頻','VR 與感測'][i]} /></button>)}</div>
         <div class="expertise-panels" aria-live="polite">{profile.focus.map((focus, i) => <div id={`expertise-panel-${i}`} data-focus-panel={i} hidden={i !== 0}><p class="console-detail">{focus.detail}</p><h2><Text en={focus.title} zh={profile.focusZh[i].title} /></h2><p><Text en={focus.text} zh={profile.focusZh[i].text} /></p></div>)}</div>
       </div>

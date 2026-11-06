@@ -26,4 +26,16 @@ export const reports: IndustryReport[] = [
     coverTitle: 'CEATEC',
     coverSubtitle: '2026.',
   },
+  {
+    title: 'WAIC 2026: AI Agents, Embodied Intelligence & SuperPOD Infrastructure',
+    zhTitle: '2026 世界人工智能大會（WAIC）深度研究報告',
+    description: 'An industry research report on AI agent commercialization, embodied intelligence, supernode computing infrastructure, optical interconnects, liquid cooling, and open standards.',
+    zhDescription: '聚焦 AI 智能體商業化、具身智能與超節點算力基礎設施，探討光互聯、液冷與開放標準的產業發展。',
+    category: 'AI research · WAIC',
+    zhCategory: '人工智能研究 · WAIC',
+    url: '/reports/waic-2026/',
+    language: 'zh-Hant',
+    coverTitle: 'WAIC',
+    coverSubtitle: '2026.',
+  },
 ];

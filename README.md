@@ -25,7 +25,12 @@ The redesigned homepage is aimed at recruiters and employers. It includes an exp
 
 Brand colors supplied by the owner: primary **#05164D**, accent **#FFAD00**. Preserve the existing portfolio structure and interactions when applying these colors. Yellow is used on navy or as decoration; body text on light backgrounds stays navy for legibility.
 
-The first hosted report is `/reports/ceatec-2026/`. Its unmodified owner-supplied HTML is in `content/reports/ceatec-2026.html`. Edit that source, then run `pnpm build` or `pnpm dev`. `scripts/build-reports.mjs` compiles report-only Tailwind 3 styles and copies pinned Chart.js and Font Awesome assets into the ignored generated `public/reports/ceatec-2026/` directory. Astro includes these files in the build. Do not edit generated files. Source report body, chart values and source links are retained; the generated version adds site navigation and an accessible chart-data table. External reference links remain external, but rendering requires no third-party CDN scripts or fonts.
+Hosted reports:
+
+- `/reports/ceatec-2026/` — source: `content/reports/ceatec-2026.html`.
+- `/reports/waic-2026/` — source: `content/reports/WAIC-2026.html`, converted to Traditional Chinese at the owner's request. Original technical names, numeric values, chart configuration, and document structure are retained.
+
+Edit the source, then run `pnpm build` or `pnpm dev`. `scripts/build-reports.mjs` registers both documents, compiles their Tailwind 3 styles separately, and copies pinned Chart.js and Font Awesome assets into ignored generated `public/reports/<slug>/` directories. Astro includes these files in the build. Do not edit generated files. The generated versions add site navigation and accessible chart-data tables. External reference links remain external, but rendering requires no third-party CDN scripts or fonts. For a new HTML report, register its source, slug, description and original chart values in the builder, add its catalogue entry below, and ignore its generated directory. Astro's development server serves these static documents at `/reports/<slug>/index.html`; `pnpm preview` serves the directory URLs used by the deployed site.
 
 Add published reports to `src/data/reports.ts`. Each item has `title`, `description`, `category`, and `url`; optional `date`, `zhTitle`, and `zhDescription`. Both the homepage and `/reports/` render from this list. An empty list displays an explicit “Coming soon” link to the collection page. Do not add fictional example reports or nonfunctional external links.
 

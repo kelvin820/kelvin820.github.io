@@ -1,0 +1,132 @@
+/* Editorial type scale for the homepage; résumé and report pages keep their own styles. */
+.homepage {
+  --sans: 'Helvetica Neue', Arial, 'Noto Sans TC', 'Noto Sans CJK TC', 'PingFang TC', 'Microsoft JhengHei', 'DejaVu Sans', sans-serif;
+  --type-body: clamp(17px, 1.3vw, 19px);
+  --type-label: 11px;
+  font-size: var(--type-body);
+}
+.homepage .site-header { height: 96px; }
+.homepage .monogram { font-family: Georgia, 'Times New Roman', serif; font-size: 38px; }
+.homepage .wordmark-name { font-size: 12px; letter-spacing: 1.8px; }
+.homepage .site-header nav { font-size: 15px; gap: 30px; }
+.homepage .language-toggle, .homepage .theme-toggle { min-width: 44px; min-height: 44px; font-size: 14px; }
+.homepage .eyebrow { font-size: var(--type-label); letter-spacing: 1.3px; line-height: 1.8; }
+.homepage .p-hero { padding: 64px 0 80px; gap: 56px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.homepage .hero-copy { min-width: 0; }
+.homepage .hero-copy > .eyebrow { font-size: var(--type-label); flex-wrap: wrap; }
+.homepage .hero-copy h1 { font-size: clamp(96px, 9vw, 136px); line-height: .96; letter-spacing: -.06em; margin: 32px 0; }
+.homepage .hero-copy h1 .name-period { font-size: 36px; margin-left: 20px; vertical-align: 22px; }
+.homepage .hero-role { font-size: clamp(20px, 1.7vw, 24px); line-height: 1.45; letter-spacing: -.02em; max-width: 27ch; }
+.homepage .p-hero-intro { font-size: var(--type-body); line-height: 1.75; max-width: 45ch; margin-top: 20px; }
+.homepage .p-actions { margin-top: 32px; gap: 28px; flex-wrap: wrap; }
+.homepage .button { min-height: 52px; padding: 16px 24px; font-size: 15px; }
+.homepage .text-link, .homepage .hero-reports-link { font-size: 15px; line-height: 1.6; }
+.homepage .hero-reports-link { margin-top: 28px; }
+.homepage .expertise-console { box-shadow: 8px 8px 0 var(--line); }
+.homepage .console-top { font-size: 10px; padding: 20px 24px; letter-spacing: .8px; }
+.homepage .expertise-choice { min-height: 56px; font-size: 14px; padding: 16px 8px; gap: 8px; }
+.homepage .expertise-choice > span:first-child { font-size: 10px; }
+.homepage .expertise-panels { padding: 28px; min-height: 240px; }
+.homepage .console-detail { font-size: 10px; line-height: 1.8; letter-spacing: 1px; }
+.homepage .expertise-panels h2 { font-size: 30px; line-height: 1.2; margin-top: 14px; }
+.homepage .expertise-panels h2 + p { font-size: 16px; line-height: 1.75; max-width: 52ch; margin-top: 12px; }
+.homepage .career-strip { padding: 30px 0; gap: 36px; }
+.homepage .career-strip > span { font-size: var(--type-label); }
+.homepage .career-strip > div > span { font-size: 24px; }
+.homepage .career-strip > div > span:first-child { font-size: 20px; }
+.homepage .p-section { padding: 104px 0; }
+.homepage .p-section-title h2, .homepage .p-contact h2 { font-size: clamp(40px, 4vw, 58px); line-height: 1.14; letter-spacing: -.035em; margin-top: 22px; text-wrap: balance; }
+.homepage .p-about { gap: 64px; }
+.homepage .p-about-copy > p { font-size: var(--type-body); line-height: 1.85; }
+.homepage .p-profile-meta { gap: 24px; padding-top: 28px; margin-top: 28px; }
+.homepage .p-profile-meta > div > span { font-size: var(--type-label); }
+.homepage .p-profile-meta strong { font-size: 16px; line-height: 1.65; margin-top: 12px; }
+.homepage .skills { gap: 8px; margin-top: 28px; }
+.homepage .skills > span { font-size: 13px; padding: 8px 12px; }
+.homepage .expand-experience { font-size: 14px; min-height: 48px; padding: 12px 18px; }
+.homepage .career-entry { grid-template-columns: 220px minmax(0, 1fr); }
+.homepage .career-year { font-size: 13px; line-height: 1.7; padding-top: 30px; }
+.homepage .career-overview, .homepage .career-details > summary { padding: 28px 0; gap: 20px; }
+.homepage .career-company-mark { width: 48px; height: 48px; font-size: 13px; }
+.homepage .career-description h3 { font-size: 21px; line-height: 1.4; letter-spacing: -.02em; }
+.homepage .career-description p { font-size: 16px; line-height: 1.65; margin-top: 8px; }
+.homepage .coming-label { font-size: 11px; }
+.homepage .career-scope { padding: 0 24px 32px 68px; }
+.homepage .career-scope > .eyebrow { font-size: var(--type-label); }
+.homepage .career-scope ul { font-size: 16px; line-height: 1.85; }
+.homepage .career-full-cv { margin: 32px 0 0 278px; }
+.homepage .section-deck { font-size: var(--type-body); line-height: 1.75; max-width: 55ch; margin-top: 24px; }
+.homepage .report-placeholder { margin-top: 40px; grid-template-columns: 1fr 1.2fr; }
+.homepage .report-cover { padding: 40px; }
+.homepage .report-cover > span { font-size: 11px; line-height: 1.8; letter-spacing: 1.2px; }
+.homepage .report-cover-published > strong { font-size: clamp(60px, 5.5vw, 80px); }
+.homepage .report-placeholder-copy { padding: 40px; }
+.homepage .report-category, .homepage .report-language { font-size: 12px; line-height: 1.6; }
+.homepage .report-placeholder-copy h3 { font-size: clamp(30px, 2.7vw, 40px); line-height: 1.2; letter-spacing: -.025em; margin: 24px 0 20px; text-wrap: balance; }
+.homepage .report-placeholder-copy p { font-size: 17px; line-height: 1.8; max-width: 48ch; }
+.homepage .report-read { font-size: 15px; padding-top: 22px; }
+.homepage .p-contact { padding: 100px 0; gap: 64px; }
+.homepage .p-contact p:not(.eyebrow) { font-size: var(--type-body); line-height: 1.8; margin-top: 24px; }
+.homepage .p-contact-links > a { font-size: 19px; line-height: 1.6; padding: 28px 0; gap: 16px; overflow-wrap: anywhere; }
+.homepage .p-contact-links small { font-size: var(--type-label); }
+.homepage .site-footer { font-size: 13px; line-height: 1.7; padding: 32px 0; }
+html[lang="zh-Hant"] .homepage { --serif: var(--sans); }
+html[lang="zh-Hant"] .homepage .hero-copy h1 { font-family: Georgia, 'Times New Roman', serif; }
+html[lang="zh-Hant"] .homepage .p-section-title h2,
+html[lang="zh-Hant"] .homepage .p-contact h2 { line-height: 1.4; letter-spacing: -.02em; }
+@media (max-width: 1100px) {
+  .homepage .p-hero { gap: 32px; }
+  .homepage .hero-copy h1 { font-size: 100px; }
+  .homepage .expertise-choice { font-size: 12px; gap: 6px; }
+  .homepage .expertise-choice > span:first-child { display: none; }
+  .homepage .expertise-panels { padding: 24px; min-height: 260px; }
+  .homepage .p-about, .homepage .p-contact { gap: 40px; }
+  .homepage .career-strip { flex-wrap: wrap; gap: 20px; }
+  .homepage .career-entry { grid-template-columns: 185px minmax(0, 1fr); }
+  .homepage .career-full-cv { margin-left: 243px; }
+  .homepage .report-placeholder-copy, .homepage .report-cover { padding: 30px; }
+}
+@media (max-width: 900px) {
+  .homepage .site-header { height: 80px; }
+  .homepage .site-header nav { margin: 0; gap: 0; font-size: 17px; }
+  .homepage .p-hero { grid-template-columns: minmax(0, 1fr); padding: 48px 0 64px; gap: 48px; }
+  .homepage .hero-copy h1 { font-size: clamp(76px, 13vw, 112px); }
+  .homepage .hero-copy { max-width: 650px; }
+  .homepage .hero-role { max-width: 32ch; }
+  .homepage .expertise-panels { min-height: 240px; }
+  .homepage .expertise-choice { font-size: 15px; }
+  .homepage .p-section { padding: 72px 0; }
+  .homepage .career-strip > div { flex-wrap: wrap; justify-content: flex-start; gap: 20px 32px; }
+  .homepage .career-entry { grid-template-columns: minmax(0, 1fr); }
+  .homepage .career-year { padding-top: 24px; }
+  .homepage .career-marker { top: 31px; }
+  .homepage .career-overview, .homepage .career-details > summary { padding: 18px 0 24px; }
+  .homepage .career-full-cv { margin-left: 27px; }
+  .homepage .career-scope { padding-left: 0; }
+  .homepage .report-placeholder { grid-template-columns: minmax(0, 1fr); }
+  .homepage .report-cover { min-height: 340px; }
+  .homepage .p-contact { padding: 72px 0; }
+}
+@media (max-width: 540px) {
+  .homepage .hero-copy h1 { font-size: clamp(76px, 23vw, 100px); margin: 28px 0; }
+  .homepage .hero-copy h1 .name-period { font-size: 28px; margin-left: 16px; vertical-align: 16px; }
+  .homepage .hero-copy > .eyebrow { font-size: 10px; letter-spacing: .5px; gap: 8px; }
+  .homepage .hero-role { font-size: 21px; }
+  .homepage .p-actions { gap: 20px; }
+  .homepage .button { padding: 16px 20px; }
+  .homepage .hero-reports-link { font-size: 14px; gap: 8px; }
+  .homepage .console-top { padding: 18px; font-size: 9px; letter-spacing: .4px; }
+  .homepage .expertise-choice { font-size: 12px; padding: 16px 5px; }
+  .homepage .expertise-panels { padding: 24px 20px; min-height: 260px; }
+  .homepage .career-strip > div > span { font-size: 21px; }
+  .homepage .career-strip > div > span:first-child { font-size: 18px; }
+  .homepage .p-section-title h2, .homepage .p-contact h2 { font-size: clamp(36px, 10vw, 44px); }
+  .homepage .career-overview, .homepage .career-details > summary { gap: 12px; flex-wrap: wrap; }
+  .homepage .career-company-mark { width: 36px; height: 36px; font-size: 11px; }
+  .homepage .career-description h3 { font-size: 18px; }
+  .homepage .career-description p { font-size: 15px; }
+  .homepage .career-overview { display: grid; grid-template-columns: 36px minmax(0, 1fr); }
+  .homepage .career-overview > .coming-label { grid-column: 2; justify-self: start; font-size: 10px; }
+  .homepage .report-cover, .homepage .report-placeholder-copy { padding: 28px 24px; }
+  .homepage .p-contact-links > a { font-size: 17px; }
+}

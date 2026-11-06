@@ -1,6 +1,7 @@
 # build output
 dist/
 public/reports/ceatec-2026/
+public/reports/waic-2026/
 # generated types
 .astro/
 
