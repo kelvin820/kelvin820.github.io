@@ -6,8 +6,6 @@
   font-size: var(--type-body);
 }
 .homepage .site-header { height: 96px; }
-.homepage .monogram { font-family: Georgia, 'Times New Roman', serif; font-size: 38px; }
-.homepage .wordmark-name { font-size: 12px; letter-spacing: 1.8px; }
 .homepage .site-header nav { font-size: 15px; gap: 30px; }
 .homepage .language-toggle, .homepage .theme-toggle { min-width: 44px; min-height: 44px; font-size: 14px; }
 .homepage .eyebrow { font-size: var(--type-label); letter-spacing: 1.3px; line-height: 1.8; }
@@ -15,7 +13,12 @@
 .homepage .hero-copy { min-width: 0; }
 .homepage .hero-copy > .eyebrow { font-size: var(--type-label); flex-wrap: wrap; }
 .homepage .hero-copy h1 { font-size: clamp(96px, 9vw, 136px); line-height: .96; letter-spacing: -.06em; margin: 32px 0; }
-.homepage .hero-copy h1 .name-period { font-size: 36px; margin-left: 20px; vertical-align: 22px; }
+.homepage .hero-copy .hero-nameplate { font-family: Georgia, 'Times New Roman', serif; line-height: 1; }
+.homepage .hero-nameplate > .given-name,
+.homepage .hero-nameplate > .family-name { display: block; font-style: normal; color: var(--ink); white-space: nowrap; }
+.homepage .hero-nameplate > .family-name { font: 600 .72em/1.15 var(--sans); letter-spacing: .085em; margin-top: 14px; }
+.homepage .hero-copy .hero-nameplate > span::before { content: none; }
+.homepage .hero-nameplate::after { content: ''; display: block; width: 64px; height: 4px; margin-top: 28px; background: #FFAD00; }
 .homepage .hero-role { font-size: clamp(20px, 1.7vw, 24px); line-height: 1.45; letter-spacing: -.02em; max-width: 27ch; }
 .homepage .p-hero-intro { font-size: var(--type-body); line-height: 1.75; max-width: 45ch; margin-top: 20px; }
 .homepage .p-actions { margin-top: 32px; gap: 28px; flex-wrap: wrap; }
@@ -71,7 +74,6 @@
 .homepage .p-contact-links small { font-size: var(--type-label); }
 .homepage .site-footer { font-size: 13px; line-height: 1.7; padding: 32px 0; }
 html[lang="zh-Hant"] .homepage { --serif: var(--sans); }
-html[lang="zh-Hant"] .homepage .hero-copy h1 { font-family: Georgia, 'Times New Roman', serif; }
 html[lang="zh-Hant"] .homepage .p-section-title h2,
 html[lang="zh-Hant"] .homepage .p-contact h2 { line-height: 1.4; letter-spacing: -.02em; }
 @media (max-width: 1100px) {
@@ -109,7 +111,6 @@ html[lang="zh-Hant"] .homepage .p-contact h2 { line-height: 1.4; letter-spacing:
 }
 @media (max-width: 540px) {
   .homepage .hero-copy h1 { font-size: clamp(76px, 23vw, 100px); margin: 28px 0; }
-  .homepage .hero-copy h1 .name-period { font-size: 28px; margin-left: 16px; vertical-align: 16px; }
   .homepage .hero-copy > .eyebrow { font-size: 10px; letter-spacing: .5px; gap: 8px; }
   .homepage .hero-role { font-size: 21px; }
   .homepage .p-actions { gap: 20px; }

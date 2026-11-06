@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { createRequire } from 'node:module';
 import { spawnSync } from 'node:child_process';
+import { profile } from '../src/data/profile.ts';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const require = createRequire(import.meta.url);
@@ -83,7 +84,7 @@ for (const report of definitions) {
 <meta name="theme-color" content="#05164D"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <style>${portalStyles}</style></head>`);
   html = html.replace(/(<body\b[^>]*>)/, `$1
-<div class="report-portal"><a href="/">← <strong>KC.</strong> 張凱貿 / Kaimau Chang</a><nav aria-label="網站導覽"><a href="/reports/">所有產業報告</a><a href="/resume/?lang=zh">個人履歷 ↗</a></nav></div>`);
+<div class="report-portal"><a href="/">← <strong>${profile.name}</strong> / 張凱貿</a><nav aria-label="網站導覽"><a href="/reports/">所有產業報告</a><a href="/resume/?lang=zh">個人履歷 ↗</a></nav></div>`);
 
   const canvas = `<canvas id="${report.chart.id}"></canvas>`;
   if (!html.includes(canvas)) throw new Error(`${report.slug}: expected chart canvas is missing`);

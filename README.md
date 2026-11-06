@@ -1,4 +1,4 @@
-# Kaimau Chang — Portfolio & CV
+# KaiMau CHANG — Portfolio & CV
 
 An Astro static website with a visitor-facing portfolio at `/` and an A4 print-friendly résumé at `/resume/`. Both render from **`src/data/profile.ts`**. The English content is based on the LinkedIn Profile.pdf supplied by the owner on 2026-11-04. No employer metrics, accomplishments or projects have been invented. The current-role headline is normalized from the more detailed Experience entry; the supplied PDF's header used “Technical Planning Manager”. Owner should review this when updating the CV.
 
@@ -53,7 +53,7 @@ The Git history retains all original files. To restore the old site, create a re
 
 ## Credits
 
-- Portfolio: adapted architecture from [RyanFitzgerald/devportfolio](https://github.com/RyanFitzgerald/devportfolio), MIT. Restyled for Kaimau Chang.
+- Portfolio: adapted architecture from [RyanFitzgerald/devportfolio](https://github.com/RyanFitzgerald/devportfolio), MIT. Restyled for KaiMau CHANG.
 - Résumé: Astro adaptation of the semantic single-column Header / Summary / WorkExperience / Education / Skills structure in [BartoszJarocki/cv](https://github.com/BartoszJarocki/cv), MIT. It is integrated into Astro rather than running a separate Next.js application.
 - Full upstream license texts are in `licenses/`.
 

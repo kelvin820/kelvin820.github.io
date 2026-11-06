@@ -1,11 +1,12 @@
 ---
 import { reports } from '../data/reports';
+import { profile } from '../data/profile';
 import Text from './Text.astro';
 const { bilingual = false } = Astro.props;
 ---
 <div class="report-collection">
   {reports.map((report, i) => <a class:list={['report-placeholder', 'report-feature', i > 0 && 'report-secondary']} href={report.url} target={report.url.startsWith('https://') ? '_blank' : undefined} rel={report.url.startsWith('https://') ? 'noopener noreferrer' : undefined}>
-    <div class="report-cover report-cover-published" aria-hidden="true"><span>KC / INDUSTRY INSIGHTS</span><div class="cover-line"></div><strong>{report.coverTitle || report.category}<br /><em>{report.coverSubtitle || 'Research'}</em></strong><span>RESEARCH · TECHNOLOGY · PERSPECTIVE</span></div>
+    <div class="report-cover report-cover-published" aria-hidden="true"><span>{profile.name} / INDUSTRY INSIGHTS</span><div class="cover-line"></div><strong>{report.coverTitle || report.category}<br /><em>{report.coverSubtitle || 'Research'}</em></strong><span>RESEARCH · TECHNOLOGY · PERSPECTIVE</span></div>
     <div class="report-placeholder-copy"><span class="report-category"><Text en={report.category} zh={report.zhCategory || report.category} />{report.language && <span class="report-language">{report.language === 'zh-Hant' ? '繁體中文' : report.language}</span>}</span><h3>{bilingual ? (report.zhTitle || report.title) : <Text en={report.title} zh={report.zhTitle || report.title} />}</h3>{bilingual && report.zhTitle && <p class="report-english-title">{report.title}</p>}<p>{bilingual ? (report.zhDescription || report.description) : <Text en={report.description} zh={report.zhDescription || report.description} />}</p><span class="report-read"><Text en="Read the full report" zh="閱讀完整報告" /><span aria-hidden="true">↗</span></span></div>
   </a>)}
 </div>

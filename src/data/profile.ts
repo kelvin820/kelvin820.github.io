@@ -2,10 +2,13 @@
 // Source: user-supplied LinkedIn Profile.pdf, received 2026-11-04.
 // Dates and roles are preserved. Summaries condense the supplied text;
 // no achievements or metrics have been invented.
+// Name spelling and surname casing confirmed directly by the owner.
+const firstName = "KaiMau";
+const lastName = "CHANG";
 export const profile = {
-  name: "KAIMAU CHANG",
-  firstName: "Kaimau",
-  initials: "KC",
+  name: `${firstName} ${lastName}`,
+  firstName,
+  lastName,
   role: "Technology Scouting & R&D Partnerships",
   position: "Director · XUNWEI Technologies",
   positionZh: "總監 · XUNWEI Technologies",
