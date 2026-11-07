@@ -2,11 +2,31 @@
 import { reports } from '../data/reports';
 import { profile } from '../data/profile';
 import Text from './Text.astro';
-const { bilingual = false } = Astro.props;
+interface Props { bilingual?: boolean; compact?: boolean; limit?: number; }
+const { bilingual = false, compact = false, limit } = Astro.props;
+const displayedReports = limit === undefined ? reports : reports.slice(0, limit);
 ---
-<div class="report-collection">
-  {reports.map((report, i) => <a class:list={['report-placeholder', 'report-feature', i > 0 && 'report-secondary']} href={report.url} target={report.url.startsWith('https://') ? '_blank' : undefined} rel={report.url.startsWith('https://') ? 'noopener noreferrer' : undefined}>
+<div class:list={['report-collection', compact && 'report-collection--compact']}>
+  {displayedReports.map((report, i) => <a class:list={['report-placeholder', 'report-feature', i > 0 && 'report-secondary']} href={report.url} target={report.url.startsWith('https://') ? '_blank' : undefined} rel={report.url.startsWith('https://') ? 'noopener noreferrer' : undefined}>
     <div class="report-cover report-cover-published" aria-hidden="true"><span>{profile.name} / INDUSTRY INSIGHTS</span><div class="cover-line"></div><strong>{report.coverTitle || report.category}<br /><em>{report.coverSubtitle || 'Research'}</em></strong><span>RESEARCH · TECHNOLOGY · PERSPECTIVE</span></div>
     <div class="report-placeholder-copy"><span class="report-category"><Text en={report.category} zh={report.zhCategory || report.category} />{report.language && <span class="report-language">{report.language === 'zh-Hant' ? '繁體中文' : report.language}</span>}</span><h3>{bilingual ? (report.zhTitle || report.title) : <Text en={report.title} zh={report.zhTitle || report.title} />}</h3>{bilingual && report.zhTitle && <p class="report-english-title">{report.title}</p>}<p>{bilingual ? (report.zhDescription || report.description) : <Text en={report.description} zh={report.zhDescription || report.description} />}</p><span class="report-read"><Text en="Read the full report" zh="閱讀完整報告" /><span aria-hidden="true">↗</span></span></div>
   </a>)}
 </div>
+<style>
+  .report-collection--compact { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; margin-top: 40px; }
+  .report-collection--compact .report-feature { display: flex; flex-direction: column; min-width: 0; margin-top: 0; }
+  .report-collection--compact .report-cover { min-height: 190px; padding: 24px 28px; gap: 16px; }
+  .report-collection--compact .report-cover > span { font-size: 10px; line-height: 1.8; letter-spacing: 1px; }
+  .report-collection--compact .report-cover > span:last-child { display: none; }
+  .report-collection--compact .report-cover > strong { font-size: 48px; line-height: 1.05; margin: 0; }
+  .report-collection--compact .report-placeholder-copy { display: flex; flex: 1; flex-direction: column; align-self: stretch; padding: 28px; }
+  .report-collection--compact .report-category, .report-collection--compact .report-language { font-size: 12px; line-height: 1.7; }
+  .report-collection--compact .report-placeholder-copy h3 { font-size: 28px; line-height: 1.25; letter-spacing: -.025em; margin: 20px 0 16px; text-wrap: balance; }
+  .report-collection--compact .report-placeholder-copy p { font-size: 16px; line-height: 1.8; max-width: 55ch; margin-bottom: 24px; }
+  .report-collection--compact .report-placeholder-copy .report-english-title { font-size: 14px!important; margin-top: 0; margin-bottom: 16px; }
+  .report-collection--compact .report-read { margin-top: auto; padding-top: 20px; gap: 16px; font-size: 15px; }
+  @media (max-width: 540px) {
+    .report-collection--compact .report-cover, .report-collection--compact .report-placeholder-copy { padding: 24px; }
+    .report-collection--compact .report-placeholder-copy h3 { font-size: 26px; }
+  }
+</style>

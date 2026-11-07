@@ -9,10 +9,10 @@ import '../../styles/portfolio.css';
 <Layout title={`Industry reports / 產業報告 — ${profile.name}`} portfolio>
   <Header />
   <main id="main" class="reports-index">
-    <p class="eyebrow">WRITING & RESEARCH / 研究與作品</p>
+    <p class="eyebrow">WRITING & RESEARCH / 產業研究</p>
     <h1>Industry perspectives.<span>產業報告與研究觀點</span></h1>
     <p class="section-deck">A collection of my industry reports and technology perspectives.<br />我撰寫的產業研究與技術觀點，持續更新。</p>
-    {reports.length ? <ReportCards bilingual /> : <p class="section-deck">Coming soon / 報告即將陸續上架。</p>}
+    {reports.length ? <ReportCards compact bilingual /> : <p class="section-deck">Coming soon / 報告即將陸續上架。</p>}
     <a class="text-link reports-back" href="/#reports">← Back to portfolio / 返回首頁作品集</a>
   </main>
 </Layout>

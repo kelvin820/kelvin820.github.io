@@ -8,6 +8,7 @@ const { resume = false, home = false } = Astro.props;
   <nav id="main-navigation" aria-label="Main navigation">
     <a href="/#about" data-section="about"><Text en="About" zh="關於我" /></a><a href="/#experience" data-section="experience"><Text en="Experience" zh="工作經歷" /></a>
     <a href="/#reports" data-section="reports"><Text en="Reports" zh="產業報告" /></a>
+    <a href="/#projects" data-section="projects"><Text en="Projects" zh="作品" /></a>
     <a class:list={['nav-resume', resume && 'active']} href="/resume/"><Text en="Résumé" zh="履歷" /> <span aria-hidden="true">↗</span></a>
   </nav>
   {home && <div class="header-controls"><button class="language-toggle" id="home-language" type="button" aria-label="Switch homepage to Chinese">中文</button><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z" /></svg></button></div>}

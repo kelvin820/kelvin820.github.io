@@ -34,10 +34,18 @@ Edit the source, then run `pnpm build` or `pnpm dev`. `scripts/build-reports.mjs
 
 Add published reports to `src/data/reports.ts`. Each item has `title`, `description`, `category`, and `url`; optional `date`, `zhTitle`, and `zhDescription`. Both the homepage and `/reports/` render from this list. An empty list displays an explicit “Coming soon” link to the collection page. Do not add fictional example reports or nonfunctional external links.
 
+The homepage displays the first three entries as selected reports, followed by a link to the complete collection. Put the reports to feature first in the array. `/reports/` displays every entry in a responsive card grid; adding more reports does not require adding homepage sections or placeholders.
+
 ```ts
 // Shape only — replace with actual owner-supplied information before adding:
 // { title, description, category, url, zhTitle?, zhDescription?, date? }
 ```
+
+### Personal projects
+
+The homepage's separate `#projects` section is driven by `src/data/projects.ts`, with an independent Projects navigation link. Quiet Hours / 兩地之間 links to `https://kelvin820.github.io/quiet_hours/` in a new tab. Its clock, city illustration, 3D and immersive-view description is based on the owner's `kelvin820/quiet_hours` repository. The preview is a screenshot of its Paris/Taipei city panels. Quiet Hours remains deployed from that repository; this portfolio does not rebuild or embed the application. Keep personal web projects out of `src/data/reports.ts` and the professional reports collection.
+
+### Profile and résumé
 
 Edit `src/data/profile.ts` or ask Codex to update it. This updates both pages. Chinese translations are in `src/data/resume.ts`; keep them synchronized when editing English descriptions. The résumé provides English / 中文 buttons and shareable `?lang=en` / `?lang=zh` URLs. Keep dates, titles and claims traceable to owner-provided material. The résumé's **Print / Save PDF** button opens the browser print dialog. Only the selected language prints. Select A4 and disable browser headers/footers. CSS handles print margins, page breaks and contact links. This desktop app's embedded browser may not support native printing; open the URL in Chrome or Edge to use the system print dialog.
 
