@@ -1,0 +1,14 @@
+---
+import { profile } from '../data/profile';
+import Text from './Text.astro';
+---
+<details class="education-research">
+  <summary><Text en="RF device R&D & IC design" zh="射頻器件研究與 IC 設計" /></summary>
+  <p><Text en={`${profile.education.project} ${profile.education.achievement}`} zh={`${profile.education.projectZh}${profile.education.achievementZh}`} /></p>
+</details>
+<style>
+  .education-research { margin-top: 12px; font-size: 14px; line-height: 1.8; }
+  .education-research summary { cursor: pointer; color: var(--accent); }
+  .education-research summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .education-research p { margin-top: 12px; color: var(--muted); }
+</style>

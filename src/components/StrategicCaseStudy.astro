@@ -1,0 +1,23 @@
+---
+import { profile } from '../data/profile';
+import Text from './Text.astro';
+const study = profile.caseStudy;
+---
+<article class="strategic-case" aria-labelledby="case-heading">
+  <div class="case-context"><Text en={study.context} zh={study.contextZh} /></div>
+  <div class="case-story"><h3 id="case-heading"><Text en={study.title} zh={study.titleZh} /></h3><p><Text en={study.description} zh={study.descriptionZh} /></p></div>
+  <dl class="case-metrics">{study.metrics.map(metric => <div><dt><Text en={metric.label} zh={metric.labelZh} /></dt><dd><Text en={metric.value} zh={'valueZh' in metric ? metric.valueZh : metric.value} /></dd></div>)}</dl>
+</article>
+<style>
+  .strategic-case { grid-column: 1 / -1; min-width: 0; padding: 40px; background: #05164D; color: #f4f6ff; border-top: 4px solid #FFAD00; }
+  .case-context { font: 11px/1.8 var(--mono); color: #FFAD00; letter-spacing: .7px; }
+  .case-story { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; margin-top: 24px; }
+  .case-story h3 { font: 400 36px/1.2 var(--serif); letter-spacing: -.025em; text-wrap: balance; }
+  .case-story p { font-size: 17px; line-height: 1.85; color: #c2cbe1; }
+  .case-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; border-top: 1px solid #ffffff30; margin: 32px 0 0; padding-top: 28px; }
+  .case-metrics > div { display: flex; flex-direction: column-reverse; gap: 12px; }
+  .case-metrics dt { font-size: 14px; line-height: 1.7; color: #c2cbe1; }
+  .case-metrics dd { font: 500 clamp(28px, 3vw, 42px)/1.2 var(--sans); letter-spacing: -.03em; color: #FFAD00; margin: 0; }
+  @media (max-width: 900px) { .case-story { grid-template-columns: minmax(0, 1fr); gap: 20px; }.case-story h3 { font-size: 32px; } }
+  @media (max-width: 540px) { .strategic-case { padding: 28px 24px; }.case-metrics { grid-template-columns: minmax(0, 1fr); gap: 24px; }.case-metrics > div + div { border-top: 1px solid #ffffff20; padding-top: 24px; } }
+</style>

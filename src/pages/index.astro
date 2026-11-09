@@ -4,6 +4,10 @@ import portrait from '../assets/kaimau-chang.jpg';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Experience from '../components/Experience.astro';
+import CapabilityOverview from '../components/CapabilityOverview.astro';
+import StrategicCaseStudy from '../components/StrategicCaseStudy.astro';
+import PatentHighlights from '../components/PatentHighlights.astro';
+import EducationResearch from '../components/EducationResearch.astro';
 import { profile } from '../data/profile';
 import { resumes } from '../data/resume';
 import Text from '../components/Text.astro';
@@ -18,7 +22,7 @@ import '../styles/homepage.css';
   <main id="main">
     <section class="p-hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span><Text en="TAIPEI, TAIWAN · TECHNOLOGY & R&D" zh="台灣・台北 · 技術探索與研發" /></p>
+        <p class="eyebrow"><span class="live-dot"></span><Text en="TAIPEI, TAIWAN · TECHNOLOGY STRATEGY" zh="台灣・台北 · 技術策略與系統架構" /></p>
         <h1 id="hero-title" class="hero-nameplate"><span class="given-name">{profile.firstName}</span> <span class="family-name">{profile.lastName}</span></h1>
         <p class="hero-role"><Text en={profile.role} zh={resumes.zh.role} /></p>
         <p class="p-hero-intro"><Text en={profile.introduction} zh={profile.introductionZh} /></p>
@@ -30,14 +34,17 @@ import '../styles/homepage.css';
         <div class="hero-portrait">
           <img src={portrait.src} alt={`${profile.name} — 個人肖像 / Portrait`} width={portrait.width} height={portrait.height} loading="eager" fetchpriority="high" decoding="async" />
         </div>
-        <div class="expertise-selector" aria-label="Explore areas of expertise">{profile.focus.map((focus, i) => <button type="button" class="expertise-choice" data-focus={i} aria-pressed={i === 0} aria-controls={`expertise-panel-${i}`}><span>0{i + 1}</span><Text en={['Technology','Wireless / RF','VR & sensing'][i]} zh={['技術與合作','無線／射頻','VR 與感測'][i]} /></button>)}</div>
+        <div class="expertise-selector" aria-label="Explore areas of expertise">{profile.focus.map((focus, i) => <button type="button" class="expertise-choice" data-focus={i} aria-pressed={i === 0} aria-controls={`expertise-panel-${i}`}><span>0{i + 1}</span><Text en={focus.label} zh={profile.focusZh[i].label} /></button>)}</div>
         <div class="expertise-panels" aria-live="polite">{profile.focus.map((focus, i) => <div id={`expertise-panel-${i}`} data-focus-panel={i} hidden={i !== 0}><p class="console-detail">{focus.detail}</p><h2><Text en={focus.title} zh={profile.focusZh[i].title} /></h2><p><Text en={focus.text} zh={profile.focusZh[i].text} /></p></div>)}</div>
       </div>
     </section>
     <div class="career-strip" aria-label="Career background"><span><Text en="CAREER ACROSS" zh="歷年任職" /></span><div>{['XUNWEI','Huawei','MediaTek','Foxconn','Compal'].map(company => <span>{company}</span>)}</div></div>
     <section id="about" class="p-section p-about">
-      <div class="p-section-title"><p class="eyebrow"><Text en="01 / PROFESSIONAL PROFILE" zh="01 / 專業背景" /></p><h2><Text en="Engineering depth." zh="工程深度，" /><br /><em><Text en="A wider perspective." zh="更寬廣的視角。" /></em></h2></div>
-      <div class="p-about-copy"><p><Text en={profile.about} zh={profile.aboutZh} /></p><div class="p-profile-meta"><div><span><Text en="CURRENT ROLE" zh="目前職務" /></span><strong><Text en={profile.position} zh={profile.positionZh} /></strong></div><div><span><Text en="EDUCATION" zh="學歷" /></span><strong><Text en={`${profile.education.degree} · ${profile.education.school}`} zh={`${resumes.zh.education.degree} · ${resumes.zh.education.school}`} /></strong></div></div><div class="skills" aria-label="Areas of expertise">{profile.skills.map(skill => <span>{skill}</span>)}</div></div>
+      <div class="p-section-title"><p class="eyebrow"><Text en="01 / PROFESSIONAL PROFILE" zh="01 / 專業背景" /></p><h2><Text en="Built in engineering." zh="以工程打底，" /><br /><em><Text en="Applied to strategy." zh="以技術策略開路。" /></em></h2></div>
+      <div class="p-about-copy"><p><Text en={profile.about} zh={profile.aboutZh} /></p><div class="p-profile-meta"><div><span><Text en="CURRENT ROLE" zh="目前職務" /></span><strong><Text en={profile.position} zh={profile.positionZh} /></strong></div><div><span><Text en="EDUCATION" zh="學歷" /></span><strong><Text en={`${profile.education.degree} · ${profile.education.school}`} zh={`${resumes.zh.education.degree} · ${resumes.zh.education.school}`} /></strong><EducationResearch /></div></div><div class="skills" aria-label="Areas of expertise">{profile.skills.map((skill, i) => <span><Text en={skill} zh={profile.skillsZh[i]} /></span>)}</div></div>
+      <CapabilityOverview />
+      <StrategicCaseStudy />
+      <PatentHighlights />
     </section>
     <Experience />
     <section id="reports" class="p-section reports-section" aria-labelledby="reports-heading"><div class="p-section-title"><p class="eyebrow"><Text en="03 / INDUSTRY RESEARCH" zh="03 / 產業研究" /></p><h2 id="reports-heading"><Text en="Industry perspectives." zh="產業報告與研究觀點。" /></h2><p class="section-deck"><Text en="A collection of my industry reports and technology perspectives." zh="在這裡分享我撰寫的產業報告與技術觀點。" /></p></div>

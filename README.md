@@ -1,6 +1,6 @@
 # KaiMau CHANG — Portfolio & CV
 
-An Astro static website with a visitor-facing portfolio at `/` and an A4 print-friendly résumé at `/resume/`. Both render from **`src/data/profile.ts`**. The English content is based on the LinkedIn Profile.pdf supplied by the owner on 2026-11-04. No employer metrics, accomplishments or projects have been invented. The current-role headline is normalized from the more detailed Experience entry; the supplied PDF's header used “Technical Planning Manager”. Owner should review this when updating the CV.
+An Astro static website with a visitor-facing portfolio at `/` and an A4 print-friendly résumé at `/resume/`. Both render from **`src/data/profile.ts`**. Employment history and education follow the owner-supplied LinkedIn Profile.pdf received on 2026-11-04. Current positioning follows the owner-supplied November 9 HTML and executive CV, plus direct updates about Compal learning agility/adaptability and Motorola support, Foxconn Tier-1 customers/Apple NPI, MediaTek prototyping, and Huawei/XUNWEI technology pathfinding. The newer executive CV assigns the biometric-sensing case to XUNWEI; the website now includes its original time comparisons and PoC/R&D windows. Existing companies, formal job titles, employment dates and verified education are retained. The owner also confirmed the highest degree (National Chung Cheng University, Electrical Engineering), RF device research, dual-band Wi-Fi LNA design, high marks in graduate IC tape-out evaluations, and co-inventorship on US9791924B2 (listed as Kai-Mau Chang). These are integrated without inventing ranks, process specifications or patent bibliographic details. Unfilled degree placeholders and ambiguous regulatory or savings claims are excluded. No achievements or metrics are invented.
 
 ## Develop
 
@@ -19,7 +19,7 @@ Only source code and the dependency lockfile are maintained. `dist/`, `node_modu
 
 ## Update content
 
-The redesigned homepage is aimed at recruiters and employers. It includes an expertise explorer, expandable career timeline, English / 中文 content toggle, light / dark theme, mobile navigation and an industry-report portfolio entry. Homepage display preferences are stored locally in the visitor's browser; no analytics or tracking is added.
+The redesigned homepage is aimed at recruiters and employers. It includes an expertise explorer, a current-capability overview, an expandable career timeline, English / 中文 content toggle, light / dark theme, mobile navigation and an industry-report portfolio entry. Homepage display preferences are stored locally in the visitor's browser; no analytics or tracking is added.
 
 ### Industry reports
 
@@ -47,7 +47,7 @@ The homepage's separate `#projects` section is driven by `src/data/projects.ts`,
 
 ### Profile and résumé
 
-Edit `src/data/profile.ts` or ask Codex to update it. This updates both pages. Chinese translations are in `src/data/resume.ts`; keep them synchronized when editing English descriptions. The résumé provides English / 中文 buttons and shareable `?lang=en` / `?lang=zh` URLs. Keep dates, titles and claims traceable to owner-provided material. The résumé's **Print / Save PDF** button opens the browser print dialog. Only the selected language prints. Select A4 and disable browser headers/footers. CSS handles print margins, page breaks and contact links. This desktop app's embedded browser may not support native printing; open the URL in Chrome or Edge to use the system print dialog.
+Edit `src/data/profile.ts` or ask Codex to update it. This updates both pages. Each career entry stores full `bullets` / `bulletsZh` for the website and concise `resumeBullets` / `resumeBulletsZh` for the printable CV, along with its bilingual stage, title and dates. `resumeSummary` / `resumeSummaryZh` and `resumeSkills` / `resumeSkillsZh` keep the one-page CV concise without reducing body text; maintain them alongside the full summary and skills. Keep the full and concise versions factually aligned; the shorter CV must not change customer scope or outcomes. The homepage combines current capabilities, the XUNWEI case study and the expandable six-entry career history. Chinese biographical translations live beside the English content in `src/data/profile.ts`; `src/data/resume.ts` selects the print fields for each language. The résumé provides English / 中文 buttons and shareable `?lang=en` / `?lang=zh` URLs. Keep dates, titles and claims traceable to owner-provided material. The résumé's **Print / Save PDF** button opens the browser print dialog. Only the selected language prints. Select A4 and disable browser headers/footers. CSS handles print margins, page breaks and contact links. This desktop app's embedded browser may not support native printing; open the URL in Chrome or Edge to use the system print dialog.
 
 ## Deploy
 

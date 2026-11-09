@@ -1,0 +1,18 @@
+---
+import { profile } from '../data/profile';
+import Text from './Text.astro';
+---
+<div class="patent-highlights" aria-label="Patents / 專利">
+  {profile.patents.map(patent => <article class="patent-record">
+    <div><p class="eyebrow"><Text en="PATENT & INVENTORSHIP" zh="專利與發明人紀錄" /></p><h3><a href={patent.url} target="_blank" rel="noopener noreferrer">{patent.number} <span aria-hidden="true">↗</span></a></h3></div>
+    <div><p class="patent-contribution"><Text en={patent.contribution} zh={patent.contributionZh} /></p><p class="patent-context"><Text en={patent.context} zh={patent.contextZh} /></p></div>
+  </article>)}
+</div>
+<style>
+  .patent-highlights { grid-column: 1 / -1; min-width: 0; }
+  .patent-record { display: grid; grid-template-columns: 1fr 1.25fr; gap: 40px; padding: 30px; border: 1px solid var(--line); border-left: 4px solid #FFAD00; }
+  .patent-record h3 { margin-top: 14px; font: 500 26px/1.3 var(--sans); letter-spacing: -.02em; }
+  .patent-contribution { font-size: 18px; font-weight: 600; line-height: 1.6; }
+  .patent-context { margin-top: 10px; font-size: 16px; line-height: 1.8; color: var(--muted); }
+  @media (max-width: 700px) { .patent-record { grid-template-columns: minmax(0, 1fr); padding: 24px; gap: 24px; } }
+</style>

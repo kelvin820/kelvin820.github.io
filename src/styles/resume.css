@@ -1,0 +1,8 @@
+.resume-body .cv-education-focus { margin-top: 6px; font-size: 11px; line-height: 1.6; color: #435258; }
+/* Keep the concise CV on A4 through spacing and editing, not smaller body text. */
+@media print {
+  .resume-body .resume-contacts { margin-top: 12px; margin-bottom: 14px; }
+  .resume-body .cv-section { margin-top: 14px; }
+  .resume-body .cv-jobs { gap: 10px; }
+  .resume-body .resume-footer { margin-top: 10px; padding-top: 8px; break-inside: avoid; }
+}

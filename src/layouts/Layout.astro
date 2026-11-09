@@ -1,7 +1,7 @@
 ---
 import { profile } from '../data/profile';
 import '../styles/global.css';
-const { title = `${profile.name} — Technology & Partnerships`, description = profile.introduction, resume = false, portfolio = false, homepage = false } = Astro.props;
+const { title = `${profile.name} — ${profile.role}`, description = profile.introduction, resume = false, portfolio = false, homepage = false } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">

@@ -1,15 +1,19 @@
 ---
 import { profile } from '../data/profile';
-import { resumes } from '../data/resume';
 import Text from './Text.astro';
 ---
 <section id="experience" class="p-section p-experience">
   <div class="p-section-title"><div><p class="eyebrow"><Text en="02 / CAREER JOURNEY" zh="02 / 職涯歷程" /></p><h2><Text en="From engineering" zh="從工程實務，" /><br /><em><Text en="to what comes next." zh="探索下一步。" /></em></h2></div><button id="expand-experience" class="expand-experience" type="button" aria-pressed="false"><Text en="Expand all roles" zh="展開所有職務" /><span aria-hidden="true">＋</span></button></div>
   <div class="career-timeline">
-    {profile.experience.map((job, i) => <div class="career-entry"><span class:list={['career-marker', i === 0 && 'is-current']} aria-hidden="true"></span><div class="career-year"><Text en={`${job.start} — ${job.end}`} zh={`${resumes.zh.experience[i].start} — ${resumes.zh.experience[i].end}`} /></div>{job.bullets.length ? <details class="career-details"><summary><div class="career-company-mark" aria-hidden="true">{['XW','HW','MT','FX','CP','CP'][i]}</div><div class="career-description"><h3>{job.company}</h3><p><Text en={job.title} zh={resumes.zh.experience[i].title} /></p></div><span class="career-expand" aria-hidden="true">＋</span></summary><div class="career-scope"><p class="eyebrow"><Text en="SCOPE OF WORK" zh="工作範疇" /></p><ul>{job.bullets.map((bullet, j) => <li><Text en={bullet} zh={resumes.zh.experience[i].bullets[j]} /></li>)}</ul></div></details> : <article class="career-overview"><div class="career-company-mark" aria-hidden="true">{i === 0 ? 'XW' : 'HW'}</div><div class="career-description"><h3>{job.company}</h3><p><Text en={job.title} zh={resumes.zh.experience[i].title} /></p></div>{i === 0 && <span class="coming-label"><Text en="CURRENT" zh="現職" /></span>}</article>}</div>)}
+    {profile.experience.map((job, i) => <div class="career-entry"><span class:list={['career-marker', i === 0 && 'is-current']} aria-hidden="true"></span><div class="career-year"><Text en={`${job.start} — ${job.end}`} zh={`${job.startZh} — ${job.endZh}`} /></div><details class="career-details"><summary><div class="career-company-mark" aria-hidden="true">{['XW','HW','MT','FX','CP','CP'][i]}</div><div class="career-description"><h3>{job.company}{i === 0 && <span class="career-current"><Text en="CURRENT" zh="現職" /></span>}</h3><p><Text en={job.title} zh={job.titleZh} /></p><p class="career-stage"><Text en={job.stage} zh={job.stageZh} /></p></div><span class="career-expand" aria-hidden="true">＋</span></summary><div class="career-scope"><p class="eyebrow"><Text en="ROLE HIGHLIGHTS" zh="經歷與能力累積" /></p><ul>{job.bullets.map((bullet, j) => <li><Text en={bullet} zh={job.bulletsZh[j]} /></li>)}</ul></div></details></div>)}
   </div>
   <a class="career-full-cv text-link" href="/resume/"><Text en="See the complete, print-friendly résumé" zh="查看完整單頁列印履歷" /> ↗</a>
 </section>
+<style>
+  .career-description .career-stage { color: var(--accent); font-size: 14px; line-height: 1.6; margin-top: 10px; }
+  .career-current { display: inline-block; vertical-align: middle; margin-left: 12px; padding: 4px 7px; font: 10px/1.4 var(--mono); color: var(--accent); border: 1px solid var(--line); letter-spacing: .5px; }
+  @media (max-width: 540px) { .career-description .career-stage { font-size: 13px; }.career-current { margin-left: 0; display: table; margin-top: 8px; } }
+</style>
 <script>
   const button = document.querySelector<HTMLButtonElement>('#expand-experience');
   const roles = [...document.querySelectorAll<HTMLDetailsElement>('.career-details')];

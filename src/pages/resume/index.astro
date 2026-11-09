@@ -6,17 +6,18 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import { profile } from '../../data/profile';
 import { resumes } from '../../data/resume';
+import '../../styles/resume.css';
 ---
 <Layout title={`${profile.name} — Résumé`} description={profile.summary} resume>
   <div class="no-print"><Header resume /></div>
   <div class="resume-toolbar no-print"><div class="language-switch" aria-label="履歷語言 / Resume language"><button type="button" data-language="en" aria-pressed="true">English</button><button type="button" data-language="zh" aria-pressed="false">中文</button></div><button id="print-resume" class="button button-dark" type="button"><span id="print-label">Print / Save PDF</span> <span aria-hidden="true">↗</span></button></div>
   <main id="main" class="resume-sheet">
   {Object.entries(resumes).map(([key, profile]) => <div class="cv-language" data-cv-language={key} lang={profile.lang} hidden={key !== 'en'}>
-    <header class="resume-header"><div><p class="resume-eyebrow">TECHNOLOGY · ENGINEERING · PARTNERSHIPS</p><h1>{profile.name}</h1><p class="resume-role">{profile.role}</p><p class="resume-location">{profile.location}</p></div></header>
+    <header class="resume-header"><div><p class="resume-eyebrow">TECHNOLOGY · SYSTEMS · STRATEGY</p><h1>{profile.name}</h1><p class="resume-role">{profile.role}</p><p class="resume-location">{profile.location}</p></div></header>
     <div class="resume-contacts"><a href={`mailto:${profile.email}`}>{profile.email}</a><a href={profile.linkedin}>linkedin.com/in/changkaimau</a><a href={profile.website}>kelvin820.github.io</a></div>
     <section class="cv-section" aria-labelledby={`${key}-summary`}><h2 id={`${key}-summary`}>{profile.labels.profile}</h2><p>{profile.summary}</p></section>
     <section class="cv-section" aria-labelledby={`${key}-work`}><h2 id={`${key}-work`}>{profile.labels.experience}</h2><div class="cv-jobs">{profile.experience.map(job => <article class="cv-job"><div class="cv-job-heading"><h3>{job.company}</h3><span>{job.start} — {job.end}</span></div><p class="cv-job-title">{job.title}</p>{job.bullets.length > 0 && <ul>{job.bullets.map(bullet => <li>{bullet}</li>)}</ul>}</article>)}</div></section>
-    <section class="cv-section" aria-labelledby={`${key}-education`}><h2 id={`${key}-education`}>{profile.labels.education}</h2><article><div class="cv-job-heading"><h3>{profile.education.school}</h3><span>{profile.education.start} — {profile.education.end}</span></div><p class="cv-job-title">{profile.education.degree}</p></article></section>
+    <section class="cv-section" aria-labelledby={`${key}-education`}><h2 id={`${key}-education`}>{profile.labels.education}</h2><article><div class="cv-job-heading"><h3>{profile.education.school}</h3><span>{profile.education.start} — {profile.education.end}</span></div><p class="cv-job-title">{profile.education.degree}</p><p class="cv-education-focus">{key === 'zh' ? profile.education.resumeNoteZh : profile.education.resumeNote}</p></article></section>
     <section class="cv-section" aria-labelledby={`${key}-skills`}><h2 id={`${key}-skills`}>{profile.labels.skills}</h2><p class="cv-skills">{profile.skills.join(' · ')}</p></section>
     <footer class="resume-footer"><span>{profile.name}</span><span>{profile.website.replace('https://', '')}</span></footer>
   </div>)}
