@@ -24,6 +24,9 @@ importers:
       chart.js:
         specifier: 4.4.9
         version: 4.4.9
+      opencc-js:
+        specifier: 1.4.2
+        version: 1.4.2
       tailwindcss-report:
         specifier: npm:tailwindcss@3.4.17
         version: tailwindcss@3.4.17
@@ -1613,6 +1616,9 @@ packages:
 
   oniguruma-to-es@4.3.6:
     resolution: {integrity: sha512-csuQ9x3Yr0cEIs/Zgx/OEt9iBw9vqIunAPQkx19R/fiMq2oGVTgcMqO/V3Ybqefr1TBvosI6jU539ksaBULJyA==}
+
+  opencc-js@1.4.2:
+    resolution: {integrity: sha512-EdcspgdROiCCZDM+jZR6Pa670xW+EW2QhctPBQ8gRjg6lrx4IHEl+2s+kt5izk/TkxVRgdWuFgaGkaEdIUfdaw==}
 
   p-limit@6.2.0:
     resolution: {integrity: sha512-kuUqqHNUqoIWp/c467RI4X6mmyuojY5jGutNU0wVTmEOOfcuwLqyMVoAi9MKi2Ak+5i9+nhmrK4ufZE8069kHA==}
@@ -3737,6 +3743,8 @@ snapshots:
       oniguruma-parser: 0.12.2
       regex: 6.1.0
       regex-recursion: 6.0.2
+
+  opencc-js@1.4.2: {}
 
   p-limit@6.2.0:
     dependencies:

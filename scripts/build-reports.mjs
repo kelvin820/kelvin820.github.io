@@ -101,3 +101,6 @@ for (const report of definitions) {
   await writeFile(join(output, 'index.html'), html);
   console.log(`Built ${report.slug} with local styles, icons, Chart.js, and accessible chart data.`);
 }
+
+const { buildIcmlReport } = await import('./build-icml-report.mjs');
+await buildIcmlReport(root, join(root, 'public/reports/ceatec-2026/assets'));

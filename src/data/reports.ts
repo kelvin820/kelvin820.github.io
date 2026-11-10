@@ -15,6 +15,18 @@ export interface IndustryReport {
 }
 export const reports: IndustryReport[] = [
   {
+    title: 'ICML 2026: On-Device AI Chip Architecture and Strategic Insights',
+    zhTitle: '2026 ICML 端側 AI 晶片架構與戰略洞察研究',
+    description: 'Research on on-device AI memory constraints, quantization, NPU compatibility, and software–hardware co-design, with comparative radar and memory charts.',
+    zhDescription: '聚焦端側 AI 的記憶體瓶頸、量化技術、NPU 算子相容性與軟硬體協同設計，搭配技術方案雷達圖與記憶體占用比較。',
+    category: 'Industry research · ICML',
+    zhCategory: '產業研究 · ICML',
+    url: '/reports/icml-2026/',
+    language: 'zh-Hant',
+    coverTitle: 'ICML',
+    coverSubtitle: '2026.',
+  },
+  {
     title: 'CEATEC 2026: R&D and Consumer Technology Insights',
     zhTitle: '探索日本 CES：CEATEC 2026 深度研發洞察',
     description: 'An industry research report examining Physical AI, meta-optics, sensing technologies, and five shifts in future consumer devices.',

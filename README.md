@@ -23,6 +23,8 @@ The redesigned homepage is aimed at recruiters and employers. It includes an exp
 
 ### Industry reports
 
+The ICML report is hosted at `/reports/icml-2026/`, with its owner-supplied Simplified Chinese source preserved byte-for-byte in `content/reports/icml-2026.html`. The build runs OpenCC (`cn` → `twp`) to produce Taiwan Traditional Chinese text, including chart labels. It declares `zh-Hant` and prioritizes Traditional Chinese fonts. No browser-side conversion or external font requests are required. `scripts/build-icml-report.mjs` preserves the original two charts, datasets, structure, technical identifiers and English paper titles while adding navigation back to the portfolio. Generated files under `public/reports/icml-2026/` are ignored. Reports are listed newest additions first in `src/data/reports.ts`.
+
 Brand colors supplied by the owner: primary **#05164D**, accent **#FFAD00**. Preserve the existing portfolio structure and interactions when applying these colors. Yellow is used on navy or as decoration; body text on light backgrounds stays navy for legibility.
 
 Hosted reports:
